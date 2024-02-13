@@ -1,6 +1,8 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+// import AboutMe from './pages/AboutMe';
 import './App.css'
 
 function App() {
