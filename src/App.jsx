@@ -6,6 +6,9 @@ import './App.css'
 function App() {
   return (
     <>
+      <h1>
+        Welcome to the world of React and Vue!
+      </h1>
       <p>
         Let love and peace rule always
       </p>

@@ -1,10 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
 
   color-scheme:   light dark;
-  background-color: FFF7ED;
+  background-color: #fff7ed;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,6 +11,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+  color: #161616;
+  font-weight: 400;
+}
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #000000;
+  }
 a {
   font-weight: 500;
   color: #646cff;
