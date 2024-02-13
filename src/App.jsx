@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import Navbar from './components/Navbar';
-import footer from './components/footer.jsx';
+import Footer from './components/Footer.jsx';
 // import AboutMe from './pages/AboutMe';
 import './App.css'
 
@@ -18,9 +18,8 @@ function App() {
           <button className='heroBtn center'>Find your van</button>
         </div>
       </div>
-      <footer>
-        <p>© 2024 VanLife</p>
-      </footer>
+
+      <Footer />
 
     </>
   )

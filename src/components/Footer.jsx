@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css'; 
 
-const footer = () => {
+const Footer = () => {
   const linksData = [
     { title: 'About Us', href: '/about' },
     { title: 'Careers', href: '/careers' },
