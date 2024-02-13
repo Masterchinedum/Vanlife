@@ -9,13 +9,11 @@ function App() {
       <div className='navCont'>
         <Navbar />
       </div>
-      <div className='contCont'>
-      <h1>
-        Welcome to the world of React and Vue!
-      </h1>
-      <p>
-        Let love and peace rule always
-      </p>
+      <div className='heroO'>
+        <div className = 'hero'>
+          <h1>Vanlife</h1>
+          <p>Explore the world in a van</p>
+        </div>
       </div>
 
     </>
