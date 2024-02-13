@@ -1,76 +1,97 @@
 .footer {
-    background-color: #f0f0f0;
-    padding: 30px 0;
-  }
-  
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .footer-top-section {
-    flex: 1;
-    margin-right: 30px; /* Adjust spacing as needed */
-  
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  
-  .footer-top-section h4 {
-    font-size: 18px;
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the footer horizontally */
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-top-section {
+  flex: 1;
+  padding: 0 20px;
+
+  h4 {
     margin-bottom: 10px;
-    color: #333;
+    font-size: 1.2rem;
   }
-  
-  .footer-top-section ul {
+
+  ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-top-section li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-top-section a {
-    color: #777;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-  
-    &:hover {
-      color: #333;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: #007bff;
+        }
+      }
     }
   }
-  
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-top: 1px solid #ddd;
-  }
-  
-  .footer-bottom-left img {
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  img {
     width: 100px;
-    height: 30px; /* Adjust based on image size */
+    height: auto;
   }
-  
-  .footer-bottom-right {
-    text-align: right;
-    color: #777;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    color: #888;
   }
-  
-  .footer-bottom-right p {
-    margin-bottom: 5px;
-  }
-  
-  .footer-bottom-right a {
-    text-decoration: none;
-    color: #777;
-  
-    &:hover {
-      color: #333;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        color: #888;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: #007bff;
+        }
+      }
     }
   }
-  
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-top-section {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
