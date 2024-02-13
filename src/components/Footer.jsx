@@ -69,12 +69,12 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-left">
           <a href="/">
-            <img src="../assets/vanlife.svg" alt="Vanlife logo" />
+            <img src="/images/amazon-logo.png" alt="Amazon logo" />
           </a>
         </div>
         <div className="footer-bottom-right">
           <p>
-            &copy; 1996-{new Date().getFullYear()} Vanlife, Inc. or its
+            &copy; 1996-{new Date().getFullYear()} Amazon.com, Inc. or its
             affiliates
           </p>
           <ul>
