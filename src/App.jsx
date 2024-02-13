@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Footer from './components/Footer.jsx';
 // import AboutMe from './pages/AboutMe';
 import './App.css'
 
@@ -20,7 +20,7 @@ function App() {
       </div>
       <footer>
         <p>© 2024 VanLife</p>
-      </footer>
+      </Footer>
 
     </>
   )
