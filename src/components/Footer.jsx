@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Footer.css'; 
 
 const Footer = () => {
@@ -94,4 +94,4 @@ const Footer = () => {
   );
 };
 
-export default footer;
+export default Footer;
