@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '../assets/vanlife.svg';
 import './Navbar.css'; // Import your CSS file for styling
 

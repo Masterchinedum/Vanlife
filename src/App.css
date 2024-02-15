@@ -1,6 +1,64 @@
 #root {
-  max-width: 1280px;
+  max-width: 2280px;
   margin: 0px;
   padding: 0px;
   text-align: center;
 }
+
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  margin: 0px;
+  padding: 150px 50px;
+  min-height: 650px;
+  background-image: url('./assets/image53.png');
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: left;
+}
+
+.heroHeading {
+  color: white;
+  font-size: 45px;
+}
+.heroText {
+  color: white;
+  padding: 40px 0 80px;
+  font-size: 20px;
+}
+
+.heroBtn{
+  padding: 10px 20px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.heroBtnc {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: #1a1818;
+  min-height: 200px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+  font-size: 1.2rem;
+}y
