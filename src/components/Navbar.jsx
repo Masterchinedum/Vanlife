@@ -7,10 +7,18 @@ const Navbar = () => {
       <div className="navbar__container">
         <img src={logo} alt="Vanlife Logo" className="navbar__logo" />
         <ul className="navbar__menu">
-          <li className="navbar__item"><a Link="./" className="navbar__link">Home</a></li>
-          <li className="navbar__item"><a Link="./about" className="navbar__link">About</a></li>
-          <li className="navbar__item"><a href="#" className="navbar__link">Services</a></li>
-          <li className="navbar__item"><a href="#" className="navbar__link">Contact</a></li>
+          <li className="navbar__item">
+            <Link to="/" className="navbar__link">Home</Link>
+          </li>
+          <li className="navbar__item">
+            <Link to="/about" className="navbar__link">About</Link>
+          </li>
+          <li className="navbar__item">
+            <Link to="/services" className="navbar__link">Services</Link>
+          </li>
+          <li className="navbar__item">
+            <Link to="/contact" className="navbar__link">Contact</Link>
+          </li>
         </ul>
       </div>
     </nav>
