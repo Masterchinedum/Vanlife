@@ -1,4 +1,5 @@
 
+import Vanlogo from '../assets/vanlife.svg';
 import './Footer.css'; 
 
 const Footer = () => {
@@ -69,12 +70,12 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-left">
           <a href="/">
-            <img src="/images/amazon-logo.png" alt="Amazon logo" />
+            <img src= {Vanlogo} alt="Vanlife logo" />
           </a>
         </div>
         <div className="footer-bottom-right">
           <p>
-            &copy; 1996-{new Date().getFullYear()} Amazon.com, Inc. or its
+            &copy; 1997-{new Date().getFullYear()} Vanlife.com, Inc. or its
             affiliates
           </p>
           <ul>
