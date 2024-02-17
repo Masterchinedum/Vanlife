@@ -1,0 +1,23 @@
+#root {
+    max-width: 2280px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  * {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .aboutHero {
+        margin: 0px;
+        padding: 150px 50px;
+        min-height: 500px;
+        background-image: url('../assets/aboutCover.png');
+        background-color: #f0f0f0;
+        background-size: cover;
+        background-position: center;
+
+  }
