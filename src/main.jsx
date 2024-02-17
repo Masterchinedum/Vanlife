@@ -7,6 +7,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
     <Routes>
       <Route path="/" element={<App />}></Route>
+      <Route path="/about" element={<p>About</p>}></Route>
       <Route path="/:catchAll(.*)" element={<p>Not found</p>}></Route>
     </Routes>
 
