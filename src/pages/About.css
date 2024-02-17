@@ -28,8 +28,13 @@
 
   }
 
-  .aboutContent h1{
+  h1{
     font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
     margin-bottom: 20px;
   }
 
@@ -38,4 +43,21 @@
         margin-bottom: 20px;
         font-family: inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-weight: 400;
+    }
+
+    .aboutCTA {
+        padding: 50px;
+        border-radius: 5px;
+        background-color: #FFCC8D;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 22px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
     }

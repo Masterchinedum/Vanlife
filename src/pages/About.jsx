@@ -20,6 +20,13 @@ function App() {
             <p>
             Our team is full of vanlife enthusiasts who know firsthand the magic of touring the world on 4 wheels.
             </p>
+            <div className='aboutCTA'> 
+                <h1>
+                    Your destination is waiting. <br></br>
+                    Your van is ready.
+                </h1>
+                <button>Learn More</button>
+            </div>
         </div>
 
       <Footer />
