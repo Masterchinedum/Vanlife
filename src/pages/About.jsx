@@ -11,6 +11,9 @@ function App() {
         <Navbar />
       </div>
         <div className='aboutHero'></div>
+        <div className='aboutContent'>
+            <p>Hello there</p>
+        </div>
 
       <Footer />
 
