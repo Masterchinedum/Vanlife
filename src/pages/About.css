@@ -23,5 +23,17 @@
   }
 
   .aboutContent{
-    margin: 50px 20px;
+    margin: 80px 40px;
+    text-align: left;
+
   }
+
+  .aboutContent h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+    .aboutContent p{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
