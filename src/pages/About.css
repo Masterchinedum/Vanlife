@@ -34,7 +34,7 @@
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 40px;
   }
 
@@ -46,6 +46,7 @@
     }
 
     .aboutCTA {
+        margin-top: 80px;
         padding: 50px;
         border-radius: 5px;
         background-color: #FFCC8D;
