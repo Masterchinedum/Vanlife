@@ -2,7 +2,7 @@ import './Vans.css';
 
 const Vans = () => {
   return (
-    <div>Vans</div>
+    <div>Vans for sale here</div>
   )
 }
 
