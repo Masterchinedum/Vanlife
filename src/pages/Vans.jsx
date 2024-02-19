@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Van from '../components/Van'; // Import the template component
+import VanCard from '../components/VanCard';
 
 const Vans = () => {
   const [vans, setVans] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -11,32 +12,32 @@ const Vans = () => {
         const response = await fetch('/api/vans');
         const data = await response.json();
         setVans(data);
-        setIsLoading(false);
       } catch (error) {
-        console.error('Error fetching vans:', error);
-        setIsLoading(false); // Indicate error state
+        setError(error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
+  if (isLoading) {
+    return <p>Loading vans...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+
   return (
     <div className="vans-container">
-      {isLoading ? (
-        <p>Loading vans...</p>
-      ) : (
-        <>
-          <h1>Available Vans</h1>
-          <ul>
-            {vans.map((van) => (
-              <li key={van.id}>
-                <Van vanData={van} />
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      <h1>Explore Our Vans!</h1>
+      <div className="vans-grid">
+        {vans.map((van) => (
+          <VanCard key={van.id} van={van} />
+        ))}
+      </div>
     </div>
   );
 };

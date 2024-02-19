@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route , Navigate} from 'react-router-d
 import App from './App.jsx';
 import About from './pages/About.jsx';
 import Vans from './pages/Vans.jsx';
+import Navbar from './components/Navbar.jsx';
 import './index.css';
 
 
