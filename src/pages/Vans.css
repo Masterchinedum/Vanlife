@@ -1,23 +1,6 @@
+/* Vans.css */
 .vans-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .vans-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .vans-container ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .vans-container li {
-    display: inline-block;
-    margin-right: 20px;
-    margin-bottom: 20px;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}

@@ -1,52 +1,20 @@
-.van-card {
-  display: flex;
-  flex-direction: column;
+/* van.css */
+.van {
   border: 1px solid #ddd;
+  padding: 20px;
   border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.van-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
+.van img {
+  max-width: 100%;
+  height: auto;
   border-radius: 5px;
-  margin-bottom: 10px;
 }
 
-.van-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+.van h2 {
+  margin-top: 0;
 }
 
-.van-name {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.van-price {
-  color: #999;
-}
-
-.van-description {
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.van-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.van-button:hover {
-  background-color: #0062cc;
+.van p {
+  margin-bottom: 0.5rem;
 }
