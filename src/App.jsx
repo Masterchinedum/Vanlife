@@ -8,9 +8,9 @@ import './App.css'
 function App() {
   return (
     <>
-      <div className='navCont'>
+      {/* <div className='navCont'>
         <Navbar />
-      </div>
+      </div> */}
       <div className = 'hero'>
         <h1 className='heroHeading'>You got the travel plans, we got the travel vans.</h1>
         <p className='heroText'>Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.</p>

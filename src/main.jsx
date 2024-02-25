@@ -9,6 +9,9 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
+    <header>
+      <Navbar />
+    </header>
     <Routes>
       <Route path="/" element={<App />}></Route>
       <Route path="/about" element={<About />}></Route>
