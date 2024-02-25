@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route , Navigate} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App.jsx';
 import About from './pages/About.jsx';
 import Vans from './pages/Vans.jsx';
 import Navbar from './components/Navbar.jsx';
 import './index.css';
+import "./server"; // Connect to the server for API calls in development
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
