@@ -9,7 +9,6 @@ export default function Vans() {
           .then(data => setVans(data.vans))
   }, [])
   
-  console.log(vans)
   
   return (
       <h1>Vans page goes here 🚐</h1>
