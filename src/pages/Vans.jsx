@@ -1,6 +1,7 @@
 // Vans.jsx
 import React, { useState, useEffect } from "react";
 import Van from "../components/Van";
+import './Vans.css';
 
 export default function Vans() {
   const [vans, setVans] = useState([]);
