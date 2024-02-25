@@ -14,8 +14,8 @@ export default function Vans() {
   }, []);
 
   return (
-    <div>
-      <h1>Vans Available for Rent</h1>
+    <div  className="container">
+      <h1 className = "vansAvail">Vans Available for Rent</h1>
       <div className="vans-container">
         {vans.map((van) => (
           <Van key={van.id} van={van} />
