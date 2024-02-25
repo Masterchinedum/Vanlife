@@ -4,6 +4,7 @@ import App from './App.jsx';
 import About from './pages/About.jsx';
 import Vans from './pages/Vans.jsx';
 import Navbar from './components/Navbar.jsx';
+import Footer from "./components/Footer.jsx"
 import './index.css';
 import "./server"; // Connect to the server for API calls in development
 
@@ -19,6 +20,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/vans" element={<Vans /> }> </Route>
       {/* <Route path="*" element={<Navigate replace to="/404" />} /> */}
     </Routes>
-
+    <footer> 
+      <Footer />
+    </footer>
   </Router>,
 )

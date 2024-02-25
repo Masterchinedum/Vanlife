@@ -1,8 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-import Navbar from './components/Navbar';
-import Footer from './components/Footer.jsx';
-// import AboutMe from './pages/AboutMe';
 import './App.css'
 
 function App() {
@@ -18,9 +13,6 @@ function App() {
           <button className='heroBtn center'>Find your van</button>
         </div>
       </div>
-
-      <Footer />
-
     </>
   )
 }
