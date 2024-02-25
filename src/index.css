@@ -26,3 +26,9 @@ p {
     font-weight: 600;
     color: #000000;
   }
+
+  footer {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+  }
