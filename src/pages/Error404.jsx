@@ -1,6 +1,8 @@
 import "./Error404.css";
 import { Link } from 'react-router-dom';
 
+import Error404Image from '../assets/error404.png';
+
 const Error404 = () => {
   return (
     <div className="error-page">
@@ -17,7 +19,7 @@ const Error404 = () => {
         </Link>
       </div>
       <img
-        src="https://i.imgur.com/qI9C9LZ.gif"
+        src= {Error404Image}
         alt="404 Error - Lost Astronaut"
         className="error-image"
       />
