@@ -1,29 +1,35 @@
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom'; // Import Navigate explicitly
+
 import App from './App.jsx';
 import About from './pages/About.jsx';
 import Vans from './pages/Vans.jsx';
-import vansDetail from './pages/vansDetail.jsx';
+import VanDetail from './pages/VanDetail.jsx';
 import Navbar from './components/Navbar.jsx';
-import Footer from "./components/Footer.jsx";
+import Footer from './components/Footer.jsx';
 import './index.css';
-import "./server"; // Connect to the server for API calls in development
 
+// Conditionally import server logic for development
+if (process.env.NODE_ENV === 'development') {
+  import('./server');
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Router>
+  <BrowserRouter>
     <header>
       <Navbar />
     </header>
     <Routes>
-      <Route path="/" element={<App />}></Route>
-      <Route path="/about" element={<About />}></Route>
-      <Route path="/vans" element={<Vans /> }> </Route>
-      <Route path="/vans/:id" element={<vansDetail />} />
-      {/* <Route path="*" element={<Navigate replace to="/404" />} /> */}
+      <Route path="/" element={<App />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/vans" element={<Vans />} />
+      <Route path="/vans" element = {<VanDetail />} />
+      {/* <Route path="*" element={<Navigate replace to="/404" />} /> 
+       // here we use the Navigate component to redirect to a 404 page when any other route is accessed */}
     </Routes>
-    <footer> 
+    <footer>
       <Footer />
     </footer>
-  </Router>,
-)
+  </BrowserRouter>
+);
