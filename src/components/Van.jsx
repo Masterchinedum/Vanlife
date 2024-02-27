@@ -1,4 +1,3 @@
-// Van.jsx
 import React from "react";
 import './Van.css';
 

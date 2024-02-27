@@ -1,7 +1,3 @@
-// import { useState } from 'react'
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer.jsx';
-
 import './About.css';
 
 function App() {
