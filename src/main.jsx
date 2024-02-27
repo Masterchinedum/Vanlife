@@ -5,6 +5,7 @@ import { Navigate } from 'react-router-dom'; // Import Navigate explicitly
 import App from './App.jsx';
 import About from './pages/About.jsx';
 import Vans from './pages/Vans.jsx';
+import Error404 from './pages/Error404.jsx';
 import VanDetail from './pages/VanDetail.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
