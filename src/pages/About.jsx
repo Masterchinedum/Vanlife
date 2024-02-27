@@ -1,11 +1,8 @@
 import './About.css';
 
-function App() {
+function About() {
   return (
     <>
-      <div className='aboutPage'>
-        <Navbar />
-      </div>
         <div className='aboutHero'></div>
         <div className='aboutContent'>
             <h1>Don’t squeeze in a sedan when you could relax in a van.</h1>
@@ -25,10 +22,8 @@ function App() {
             </div>
         </div>
 
-      <Footer />
-
     </>
   )
 }
 
-export default App
+export default About

@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { Navigate } from 'react-router-dom'; // Import Navigate explicitly
+import { Navigate } from 'react-router-dom'; // Import Navigate explicitly
 
 import App from './App.jsx';
 import About from './pages/About.jsx';
@@ -24,9 +24,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About />} />
       <Route path="/vans" element={<Vans />} />
-      <Route path="/vans" element = {<VanDetail />} />
-      {/* <Route path="*" element={<Navigate replace to="/404" />} /> 
-       // here we use the Navigate component to redirect to a 404 page when any other route is accessed */}
+      <Route path="/vans/:id" element = {<VanDetail />} />
+      <Route path="*" element={<Navigate replace to="/404" />} /> 
+       // here we use the Navigate component to redirect to a 404 page when any other route is accessed
     </Routes>
     <footer>
       <Footer />
