@@ -10,10 +10,8 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import './index.css';
 
-// Conditionally import server logic for development
-if (process.env.NODE_ENV === 'development') {
-  import('./server');
-}
+import('./server');
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
