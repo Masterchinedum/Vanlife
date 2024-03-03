@@ -6,21 +6,12 @@ function VanDetail() {
   const [loading, setLoading] = useState(true);
   const params = useParams();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/api/vans/${params.id}`);
-        const data = await response.json();
-        setVan(data.van);
-      } catch (error) {
-        console.error("Error fetching van:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [params.id]);
+useEffect(() => {
+    fetch(`/api/vans/${params.id}`)
+        .then(res => res.json())
+        .then(data => setVan(data.van))
+        .catch((error) => console.error("Error fetching vans:", error));
+}, [params.id])
 
   if (loading) {
     return <div>Loading...</div>;
