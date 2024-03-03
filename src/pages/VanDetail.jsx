@@ -1,34 +1,28 @@
+import React from "react";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 
-function VanDetail() {
-  const [van, setVan] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const params = useParams();
+export default function VanDetail() {
+    const params = useParams()
+    const [van, setVan] = React.useState(null)
 
-useEffect(() => {
-    fetch(`/api/vans/${params.id}`)
-        .then(res => res.json())
-        .then(data => setVan(data.van))
-        .catch((error) => console.error("Error fetching vans:", error));
-}, [params.id])
+    React.useEffect(() => {
+        fetch(`/api/vans/${params.id}`)
+            .then(res => res.json())
+            .then(data => setVan(data.vans))
+    }, [params.id])
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!van) {
-    return <div>Van not found.</div>;
-  }
-
-  return (
-    <div>
-      <h1>Van Detail Page</h1>
-      <p>Name: {van.name}</p>
-      <p>Type: {van.type}</p>
-      {/* Display other properties as needed */}
-    </div>
-  );
+    return (
+        <div className="van-detail-container">
+            {van ? (
+                <div className="van-detail">
+                    <img src={van.imageUrl} />
+                    <i className={`van-type ${van.type} selected`}>{van.type}</i>
+                    <h2>{van.name}</h2>
+                    <p className="van-price"><span>${van.price}</span>/day</p>
+                    <p>{van.description}</p>
+                    <button className="link-button">Rent this van</button>
+                </div>
+            ) : <h2>Loading...</h2>}
+        </div>
+    )
 }
-
-export default VanDetail;
