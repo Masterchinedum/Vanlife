@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function VanDetail() {
-  const [vans, setVans] = useState([]);
+  const [van, setVan] = useState(null);
+  const [loading, setLoading] = useState(true);
   const params = useParams();
 
   useEffect(() => {
@@ -10,28 +11,33 @@ function VanDetail() {
       try {
         const response = await fetch(`/api/vans/${params.id}`);
         const data = await response.json();
-        setVans(data.vans);
+        setVan(data.van);
       } catch (error) {
-        console.error("Error fetching vans:", error);
+        console.error("Error fetching van:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
-  }, [params.id]); // Run the effect when params.id changes
+  }, [params.id]);
 
-  const van = vans[0]; // Access the first van (assuming there's only one)
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  console.log(van); // Log the fetched van data outside of useEffect
-
+  if (!van) {
+    return <div>Van not found.</div>;
+  }
 
   return (
     <div>
-      <h1>Van Detail Page Goes Here</h1>
-          <p>Name: {vans.name}</p>
-          <p>Type: {vans.type}</p>
+      <h1>Van Detail Page</h1>
+      <p>Name: {van.name}</p>
+      <p>Type: {van.type}</p>
+      {/* Display other properties as needed */}
     </div>
   );
-
 }
 
 export default VanDetail;
