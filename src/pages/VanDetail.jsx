@@ -23,19 +23,15 @@ function VanDetail() {
 
   console.log(van); // Log the fetched van data outside of useEffect
 
+
   return (
     <div>
       <h1>Van Detail Page Goes Here</h1>
-      {/* Render van details using the van variable */}
-      {van && (
-        <>
-          <p>Name: {van.name}</p>
-          <p>Type: {van.type}</p>
-          {/* ... other details */}
-        </>
-      )}
+          <p>Name: {vans.name}</p>
+          <p>Type: {vans.type}</p>
     </div>
   );
+
 }
 
 export default VanDetail;
