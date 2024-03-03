@@ -1,11 +1,11 @@
-import React from "react";
+import {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 
 export default function VanDetail() {
     const params = useParams()
-    const [van, setVan] = React.useState(null)
+    const [van, setVan] = useState(null)
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetch(`/api/vans/${params.id}`)
             .then(res => res.json())
             .then(data => setVan(data.vans))
