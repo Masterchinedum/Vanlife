@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Van from "../components/Van";
 import './Vans.css';
 
-export default function Vans() {
+function Vans() {
   const [vans, setVans] = useState([]);
 
   useEffect(() => {
@@ -24,3 +24,5 @@ export default function Vans() {
     </div>
   );
 }
+
+export default Vans
