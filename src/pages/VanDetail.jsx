@@ -22,17 +22,19 @@ function VanDetail() {
             });
     }, [params.id]);
 
+    const [imageUrl, type, price, description] = van;
+
     return (
         <div className="van-detail-container">
             {loading ? (
                 <h2>Loading...</h2>
             ) : van ? (
                 <div className="van-detail">
-                    <img src={van.imageUrl} alt={van.name} />
-                    <i className={`van-type ${van.type} selected`}>{van.type}</i>
+                    <img src={imageUrl} alt={van.name} />
+                    <i className={`van-type ${type} selected`}>{type}</i>
                     <h2>{van.name}</h2>
-                    <p className="van-price"><span>${van.price}</span>/day</p>
-                    <p>{van.description}</p>
+                    <p className="van-price"><span>${price}</span>/day</p>
+                    <p>{description}</p>
                     <button className="link-button">Rent this van</button>
                 </div>
             ) : (
