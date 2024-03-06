@@ -22,7 +22,7 @@ function VanDetail() {
             });
     }, [params.id]);
 
-    const [imageUrl, type, price, description] = van;
+    const {imageUrl, type, price, description} = van;
 
     return (
         <div className="van-detail-container">
