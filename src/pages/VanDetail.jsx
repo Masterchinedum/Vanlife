@@ -13,7 +13,11 @@ function VanDetail() {
         fetch(`/api/vans/${params.id}`)
             .then(res => res.json())
             .then(data => {
-                setVan(data.vans);
+                if (data && data.vans) {
+                    setVan(data.vans);
+                } else {
+                    console.error("Van details not found");
+                }
                 setLoading(false);
             })
             .catch(error => {
@@ -22,27 +26,30 @@ function VanDetail() {
             });
     }, [params.id]);
 
-    const {imageUrl, type, price, description} = van;
+    if (loading) {
+        return <h2>Loading...</h2>;
+    }
+
+    if (!van) {
+        return <h2>Van not found</h2>;
+    }
+
+    const { imageUrl, type, price, description } = van;
 
     return (
         <div className="van-detail-container">
-            {loading ? (
-                <h2>Loading...</h2>
-            ) : van ? (
-                <div className="van-detail">
-                    <img src={imageUrl} alt={van.name} />
-                    <i className={`van-type ${type} selected`}>{type}</i>
-                    <h2>{van.name}</h2>
-                    <p className="van-price"><span>${price}</span>/day</p>
-                    <p>{description}</p>
-                    <button className="link-button">Rent this van</button>
-                </div>
-            ) : (
-                <h2>Van not found</h2>
-            )}
+            <div className="van-detail">
+                <img src={imageUrl} alt={van.name} />
+                <i className={`van-type ${type} selected`}>{type}</i>
+                <h2>{van.name}</h2>
+                <p className="van-price"><span>${price}</span>/day</p>
+                <p>{description}</p>
+                <button className={`link-button ${type}`}>Rent this van</button>
+            </div>
         </div>
     );
 }
+
 
 
 export default VanDetail
