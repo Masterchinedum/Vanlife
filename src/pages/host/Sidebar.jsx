@@ -4,10 +4,13 @@ import "./Sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Link to="/dashboard/reviews" className="sidebar-link">
+      <Link to="/host" className="sidebar-link">
+        Dashboard
+      </Link>
+      <Link to="/host/reviews" className="sidebar-link">
         Reviews
       </Link>
-      <Link to="/dashboard/income" className="sidebar-link">
+      <Link to="/host/income" className="sidebar-link">
         Income
       </Link>
     </div>
