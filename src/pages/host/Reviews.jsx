@@ -1,50 +1,30 @@
-import React from 'react';
+// Reviews.jsx
 
-const reviewsData = [
-  {
-    id: 1,
-    name: 'John Doe',
-    rating: 5,
-    review:
-      "This product is amazing! It's easy to use and has all the features I need. I highly recommend it!",
-  },
-  {
-    id: 2,
-    name: 'Jane Smith',
-    rating: 4,
-    review:
-      "I'm generally satisfied with the product. It works well, but it could be improved with a few additional features.",
-  },
-  {
-    id: 3,
-    name: 'Michael Brown',
-    rating: 3,
-    review:
-      "The product is okay, but it has some limitations. I might consider a different option next time.",
-  },
-];
+import React from 'react';
+import './Reviews.css';
 
 const Reviews = () => {
+  const reviews = [
+    { id: 1, author: 'John Doe', date: 'March 1, 2023', content: 'Great product, highly recommended!' },
+    { id: 2, author: 'Jane Smith', date: 'April 15, 2023', content: 'Excellent service and quality.' },
+    { id: 3, author: 'Alice Johnson', date: 'May 20, 2023', content: 'Very satisfied with my purchase.' },
+    // Add more dummy data as needed
+  ];
+
   return (
     <div className="reviews-container">
       <h2>Customer Reviews</h2>
-      <ul className="reviews-list">
-        {reviewsData.map((review) => (
-          <li key={review.id} className="review-item">
-            <div className="reviewer-info">
-              <span className="reviewer-name">{review.name}</span>
-              <div className="rating">
-                {Array(review.rating)
-                  .fill(1)
-                  .map((_, i) => (
-                    <span key={i} className="star">★</span>
-                  ))}
-              </div>
+      <div className="reviews-list">
+        {reviews.map((review) => (
+          <div key={review.id} className="review-item">
+            <div className="review-header">
+              <div className="author">{review.author}</div>
+              <div className="date">{review.date}</div>
             </div>
-            <p className="review-text">{review.review}</p>
-          </li>
+            <div className="content">{review.content}</div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
