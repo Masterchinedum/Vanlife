@@ -1,18 +1,35 @@
 import "./income.css";
 
-const Income = () => {
-  const incomeData = [
-    { month: 'January', income: '$10,000' },
-    { month: 'February', income: '$12,500' },
-    { month: 'March', income: '$15,200' },
-  ];
+import React from 'react';
+import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
 
+const incomeData = [
+  { month: 'Feb 2023', income: 8000 },
+  { month: 'Mar 2023', income: 9500 },
+  { month: 'Apr 2023', income: 11000 },
+  { month: 'May 2023', income: 12200 },
+  { month: 'Jun 2023', income: 10800 },
+  { month: 'Jul 2023', income: 11500 },
+  { month: 'Aug 2023', income: 13000 },
+  { month: 'Sep 2023', income: 14200 },
+  { month: 'Oct 2023', income: 13800 },
+  { month: 'Nov 2023', income: 12500 },
+  { month: 'Dec 2023', income: 11000 },
+  { month: 'Jan 2024', income: 9800 },
+  { month: 'Feb 2024', income: 10500 },
+];
+
+const Income = () => {
   return (
     <div className="income-container">
       <h2>Income Overview</h2>
       <div className="income-chart">
-        {/* Replace with your preferred charting library */}
-        <p>Chart will be displayed here</p>
+        <LineChart width={600} height={250} data={incomeData}>
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Line type="monotone" dataKey="income" stroke="#4CAF50" />
+        </LineChart>
       </div>
       <ul className="income-list">
         {incomeData.map((item) => (
