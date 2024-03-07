@@ -3,8 +3,8 @@ import './Navbar.css'; // Import your CSS file for styling
 import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar__container">
+    <header className="navbar">
+      <nav className="navbar__container">
         <Link to = '/'>
           <img src={logo} alt="Vanlife Logo" className="navbar__logo" />
         </Link>
@@ -22,8 +22,8 @@ const Navbar = () => {
             <Link to="/contact" className="navbar__link">Contact</Link>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
