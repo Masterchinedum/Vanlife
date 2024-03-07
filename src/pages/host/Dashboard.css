@@ -1,47 +1,101 @@
-.dashboard-container {
+/* Overall styles */
+body {
+    margin: 0;
+    font-family: sans-serif; /* Choose a modern font */
+  }
+  
+  .dashboard-container {
     display: flex;
+    min-height: 100vh; /* Set minimum height for full viewport */
+    background-color: #f5f5f5; /* Light background */
   }
   
+  /* Sidebar styles */
   .sidebar {
-    width: 250px;
-    background-color: #f0f0f0;
-  }
-  
-  .main-content {
-    flex: 1;
+    width: 250px; /* Fixed sidebar width */
+    background-color: #333; /* Dark sidebar */
+    color: #fff; /* White text */
     padding: 20px;
+    /* Add other sidebar styles as needed */
   }
   
+  /* Main content styles */
+  .main-content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Add padding for content */
+  }
+  
+  /* Header styles */
   .header {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Add spacing after header */
   }
   
+  .header h1,
+  .header p {
+    margin: 0; /* Remove default margins */
+  }
+  
+  h1 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+  
+  p {
+    font-size: 1.2rem; /* Adjust paragraph size */
+    color: #777; /* Grayish text color */
+  }
+  
+  /* Content styles */
   .content {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Allow content to wrap on small screens */
+    justify-content: space-between; /* Distribute content evenly */
   }
   
   .task-list,
   .statistics {
-    flex: 1;
-    margin-right: 20px;
+    flex: 1; /* Take up half the space within .content */
+    padding: 15px;
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #fff; /* White background for content sections */
+    margin-bottom: 20px; /* Add spacing between sections */
   }
   
   .task-list h2,
   .statistics h2 {
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Adjust section headings */
+    margin-bottom: 10px; /* Add spacing after headings */
   }
   
   .task-list ul {
-    list-style-type: none;
+    list-style: none; /* Remove default bullet points */
     padding: 0;
+    margin: 0;
   }
   
   .task-list li {
     margin-bottom: 5px;
   }
   
-  .statistics p {
-    margin: 5px 0;
+  /* Responsiveness (media queries) */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none; /* Hide sidebar on small screens */
+    }
+  
+    .main-content {
+      padding: 10px; /* Adjust padding for smaller viewports */
+    }
+  
+    .content {
+      flex-direction: column; /* Stack content vertically on small screens */
+    }
+  
+    .task-list,
+    .statistics {
+      margin-bottom: 10px; /* Reduce spacing on smaller screens */
+    }
   }
   
