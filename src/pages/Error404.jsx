@@ -20,7 +20,7 @@ const Error404 = () => {
       </div>
       <img
         src= {Error404Image}
-        alt="404 Error - Lost Astronaut"
+        alt="404 Error"
         className="error-image"
       />
     </div>
