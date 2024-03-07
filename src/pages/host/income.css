@@ -1,43 +1,42 @@
 /* income.css */
 
 .income-container {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .income-container h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .income-chart {
-    margin-bottom: 20px;
-  }
-  
-  .income-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .income-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .income-list li:last-child {
-    border-bottom: none;
-  }
-  
-  .income-list .month {
-    font-weight: bold;
-  }
-  
-  .income-list .amount {
-    color: #4CAF50;
-  }
-  
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.income-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.income-chart {
+  margin-bottom: 20px;
+}
+
+.income-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.income-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.income-list li:last-child {
+  border-bottom: none;
+}
+
+.income-list .month {
+  font-weight: bold;
+}
+
+.income-list .amount {
+  color: #4CAF50;
+}
