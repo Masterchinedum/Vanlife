@@ -4,15 +4,12 @@ import "./Sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Link to="/host" className="sidebar-link">
-        Dashboard
-      </Link>
-      <Link to="/host/reviews" className="sidebar-link">
-        Reviews
-      </Link>
-      <Link to="/host/income" className="sidebar-link">
-        Income
-      </Link>
+      <h3>Dashboard</h3>
+      <ul>
+        <li><Link to="/dashboard">Home</Link></li>
+        <li><Link to="/dashboard/income">Income</Link></li>
+        <li><Link to="/dashboard/reviews">Reviews</Link></li>
+      </ul>
     </div>
   );
 };
