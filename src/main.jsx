@@ -10,6 +10,8 @@ import VanDetail from './pages/VanDetail.jsx';
 import './index.css';
 import Layout from './components/Layout.jsx';
 import Dashboard from './pages/host/Dashboard.jsx';
+import Income from './pages/host/Income.jsx';
+import Reviews from './pages/host/Reviews.jsx';
 
 import('./server');
 
@@ -19,11 +21,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes>
       <Route  element={<Layout />} >
         <Route path="/" element={<App />} />
-        <Route path="/about" element={<Dashboard />} />
-        <Route path="/host" element={<About />} />
+        <Route path="/host" element={<Dashboard />} />
+        <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
         <Route path="/vans/:id" element={<VanDetail />} />
-        
+        <Route path="/host/income" element={<Income />} />
+        <Route path="/host/reviews" element = {<Reviews />} />
         <Route path="*" element={<Error404 />} /> {/* Render the Error404 component for any unmatched route */}
       </Route>
     </Routes>
