@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './About.css';
 
 function About() {
@@ -18,7 +19,9 @@ function About() {
                     Your destination is waiting. <br></br>
                     Your van is ready.
                 </h2>
-                <button>Learn More</button>
+                <Link to = "/">
+                  <button>Learn More</button>
+                </Link>
             </div>
         </div>
 
