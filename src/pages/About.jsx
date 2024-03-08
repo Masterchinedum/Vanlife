@@ -19,7 +19,7 @@ function About() {
                     Your destination is waiting. <br></br>
                     Your van is ready.
                 </h2>
-                <Link to = "/">
+                <Link to = "/vans">
                   <button>Learn More</button>
                 </Link>
             </div>
