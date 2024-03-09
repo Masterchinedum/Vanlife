@@ -19,15 +19,15 @@ import('./server');
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route  element={<Layout />} >
-        <Route path="/" element={<App />} />
-        <Route path="/host" element={<Dashboard />} >
-          <Route path="/host/income" element={<Income />} />
-          <Route path="/host/reviews" element = {<Reviews />} />
+      <Route  path="/" element={<Layout />} >
+        <Route Index element={<App />} />
+        <Route path="host" element={<Dashboard />} >
+          <Route path="income" element={<Income />} />
+          <Route path="reviews" element = {<Reviews />} />
         </Route>
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />} />
-        <Route path="/vans/:id" element={<VanDetail />} />
+        <Route path="about" element={<About />} />
+        <Route path="vans" element={<Vans />} />
+        <Route path="vans/:id" element={<VanDetail />} />
         <Route path="*" element={<Error404 />} /> {/* Render the Error404 component for any unmatched route */}
       </Route>
     </Routes>
