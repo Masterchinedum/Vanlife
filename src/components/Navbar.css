@@ -1,10 +1,9 @@
 /* Navbar.css */
 
 .navbar {
-  background-color: transparent;
-  color: white;
+  background-color: #f8f9fa; /* Light background color */
+  color: #333; /* Text color */
   padding: 1rem;
-  border: #333 solid 0px 0px  2px 0px;
 }
 
 .navbar__container {
@@ -14,7 +13,7 @@
 }
 
 .navbar__logo {
-  height: 30px;
+  height: 30px; /* Reduced height for logo */
 }
 
 .navbar__menu {
@@ -29,7 +28,7 @@
 }
 
 .navbar__item a {
-  color: white;
+  color: #333; /* Link color */
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -37,13 +36,13 @@
 }
 
 .navbar__item a:hover {
-  background-color: #555;
+  background-color: #e9ecef; /* Lighter background on hover */
 }
 
 .activeLink {
-  background-color: #555;
+  background-color: #e9ecef; /* Lighter background for active link */
 }
 
 .otherLink {
-  background-color: #333;
+  background-color: #f8f9fa; /* Light background for other links */
 }
