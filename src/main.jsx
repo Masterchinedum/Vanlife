@@ -20,9 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route  path="/" element={<Layout />} >
-        <Route Index element={<App />} />
+        <Route index element={<App />} />
         <Route path="host" element={<DashLayout /> }>
-          <Route Index element={<Dashboard /> } />
+          <Route index element={<Dashboard /> } />
           <Route path="income" element={<Income />} />
           <Route path="reviews" element = {<Reviews />} />
         </Route>
