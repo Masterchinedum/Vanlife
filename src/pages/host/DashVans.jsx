@@ -2,7 +2,9 @@ import React from 'react'
 
 const DashVans = () => {
   return (
-    <div>DashVans</div>
+    <div>
+        List of users's Vans Goes Here
+    </div>
   )
 }
 
