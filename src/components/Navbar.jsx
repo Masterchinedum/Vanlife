@@ -1,6 +1,6 @@
 import logo from '../assets/vanlife.svg';
 import './Navbar.css'; // Import your CSS file for styling
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <header className="navbar">
@@ -10,19 +10,29 @@ const Navbar = () => {
         </Link>
         <ul className="navbar__menu">
           <li className="navbar__item">
-            <Link to="/" className="navbar__link">Home</Link>
+            <NavLink to="/" 
+            className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
+              Home</NavLink>
           </li>
           <li className="navbar__item">
-            <Link to="/host" className="navbar__link">Host</Link>
+            <NavLink to="/host" 
+            className={({isActive}) => isActive ? "activeLink" : "otherLink"}link"}>
+              Host</NavLink>
           </li>
           <li className="navbar__item">
-            <Link to="/about" className="navbar__link">About</Link>
+            <NavLink to="/about" 
+            className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
+              About</NavLink>
           </li>
           <li className="navbar__item">
-            <Link to="/vans" className="navbar__link">Vans</Link>
+            <NavLink to="/vans" 
+            className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
+              Vans</NavLink>
           </li>
           <li className="navbar__item">
-            <Link to="/contact" className="navbar__link">Contact</Link>
+            <NavLink to="/contact" 
+            className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
+              Contact</NavLink>
           </li>
         </ul>
       </nav>
