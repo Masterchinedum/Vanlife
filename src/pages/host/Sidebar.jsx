@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import "./Sidebar.css";
 
 
@@ -7,9 +7,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <h3>Dashboard</h3>
       <ul>
-        <li><NavLink to="/host"
-        className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
-        Me</NavLink></li>
+        <li><Link to="/host"> Me </Link></li>
         <li><NavLink to="/host/income"
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
         Income</NavLink></li>

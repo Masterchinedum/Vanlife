@@ -9,7 +9,6 @@ import VanDetail from './pages/VanDetail.jsx';
 
 import './index.css';
 import Layout from './components/Layout.jsx';
-import dLayout from './pages/host/dLayout.jsx';
 import Dashboard from './pages/host/Dashboard.jsx';
 import Income from './pages/host/Income.jsx';
 import Reviews from './pages/host/Reviews.jsx';
@@ -21,9 +20,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route  path="/" element={<Layout />} >
-        <Route index element={<App />} />
-        <Route path="host" element={<dLayout />} >
-          <Route index element={<Dashboard />} />
+        <Route Index element={<App />} />
+        <Route path="host" element={<Dashboard />} >
           <Route path="income" element={<Income />} />
           <Route path="reviews" element = {<Reviews />} />
         </Route>
