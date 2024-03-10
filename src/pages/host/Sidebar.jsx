@@ -13,6 +13,9 @@ const Sidebar = () => {
         <li><NavLink to="/host/income"
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
         Income</NavLink></li>
+        <li><NavLink to="/host/vans"
+        className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
+        Vans </NavLink></li>
         <li><NavLink to="/host/reviews"
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
         Reviews</NavLink></li>
