@@ -12,6 +12,7 @@ import Layout from './components/Layout.jsx';
 import Dashboard from './pages/host/Dashboard.jsx';
 import Income from './pages/host/Income.jsx';
 import Reviews from './pages/host/Reviews.jsx';
+import DashVans from './pages/host/DashVans.jsx';
 
 import('./server');
 
@@ -24,8 +25,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="host" element={<DashLayout /> }>
           <Route index element={<Dashboard /> } />
           <Route path="income" element={<Income />} />
+          <Route path='vans' element = {<DashVans />} />
+          <Route path=':vanId'
           <Route path="reviews" element = {<Reviews />} />
-          
         </Route>
         <Route path="about" element={<About />} />
         <Route path="vans" element={<Vans />} />
