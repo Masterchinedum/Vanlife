@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Dashboard /> } />
           <Route path="income" element={<Income />} />
           <Route path='vans' element = {<DashVans />} />
-          <Route path=':vanId' element = {<DashVan />} />
+          <Route path='vans/:vanId' element = {<DashVan />} />
           <Route path="reviews" element = {<Reviews />} />
         </Route>
         <Route path="about" element={<About />} />
