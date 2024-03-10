@@ -1,0 +1,56 @@
+/* DashVandet.css */
+
+.van-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .van-detail {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .van-detail img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .van-type {
+    font-size: 0.8em;
+    color: #777;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .van-price {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .van-detail p {
+    margin-bottom: 20px;
+  }
+  
+  .link-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .link-button:hover {
+    background-color: #0056b3;
+  }
+  
