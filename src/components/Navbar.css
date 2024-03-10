@@ -1,80 +1,49 @@
 /* Navbar.css */
 
 .navbar {
-  background-color: #fff; /* Light background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Horizontal spacing */
-  align-items: center; /* Vertical alignment */
-  height: 80px; /* Set navbar height */
-  padding: 0 20px; /* Add horizontal padding */
+  background-color: transparent;
+  color: white;
+  padding: 1rem;
+  border: #333 solid 0px 0px  2px 0px;
 }
 
 .navbar__container {
-  display: flex; /* Flexbox for logo and menu */
-  align-items: center; /* Vertically align logo and menu */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar__logo {
-  width: 100px; /* Adjust logo width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Spacing after logo */
+  height: 30px;
 }
 
 .navbar__menu {
-  list-style: none; /* Remove default list styling */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Flexbox for horizontal layout */
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar__item {
-  margin-right: 20px; /* Horizontal spacing between links */
+  margin-left: 1rem;
 }
 
-.navbar__link,
-.navbar__link.activeLink,
-.navbar__link:hover {
-  text-decoration: none; /* Remove underline */
-  color: #333; /* Link color */
-  font-family: Arial, sans-serif; /* Modern font choice */
-  font-size: 16px; /* Readable font size */
-  transition: color 0.2s ease-in-out; /* Smooth hover transition */
+.navbar__item a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.navbar__link.activeLink {
-  color: #007bff; /* Active link color - adjust to match branding */
-  font-weight: bold; /* Slightly bolder text for active link */
+.navbar__item a:hover {
+  background-color: #555;
 }
 
-.navbar__link:hover {
-  color: #0056b3; /* Hover color - adjust to match branding */
+.activeLink {
+  background-color: #555;
 }
 
-/* Media query for responsive design (adjust breakpoints as needed) */
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap; /* Wrap content on smaller screens */
-  }
-
-  .navbar__container {
-    flex-direction: column; /* Stack logo and menu vertically */
-    align-items: flex-start; /* Align logo and menu to left */
-  }
-
-  .navbar__logo {
-    margin-right: 0; /* Remove margin on smaller screens */
-    margin-bottom: 10px; /* Add margin for spacing */
-  }
-
-  .navbar__menu {
-    flex-direction: column; /* Vertical menu on smaller screens */
-    margin-top: 10px; /* Add margin for spacing */
-  }
-
-  .navbar__item {
-    margin-right: 0; /* Remove horizontal spacing */
-    margin-bottom: 10px; /* Add vertical spacing */
-  }
+.otherLink {
+  background-color: #333;
 }
