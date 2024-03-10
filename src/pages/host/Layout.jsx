@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import "./Dashboard.css";
 import Sidebar from './Sidebar';
 
-const Dashboard = () => {
+const Layout  = () => {
   return (
     <div className="dashboard-container">
       <Sidebar />
@@ -11,4 +11,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Layout
