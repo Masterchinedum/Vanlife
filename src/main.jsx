@@ -9,7 +9,7 @@ import VanDetail from './pages/VanDetail.jsx';
 
 import './index.css';
 import Layout from './components/Layout.jsx';
-import {Layout as dLayout} from "./pages/host/Layout"
+import dLayout from './pages/host/dLayout.jsx';
 import Dashboard from './pages/host/Dashboard.jsx';
 import Income from './pages/host/Income.jsx';
 import Reviews from './pages/host/Reviews.jsx';
