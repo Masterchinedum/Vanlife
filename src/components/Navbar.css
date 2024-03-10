@@ -41,6 +41,8 @@
 
 .activeLink {
   background-color: #e9ecef; /* Lighter background for active link */
+  font-weight: bold;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif /* Bold text for active link */
 }
 
 .otherLink {
