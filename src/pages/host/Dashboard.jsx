@@ -4,8 +4,6 @@ import Sidebar from './Sidebar';
 
 const Dashboard = () => {
   return (
-    <div className="dashboard-container">
-      <Sidebar />
         <div className="main-content">
           <div className="header">
             <h1>Welcome to Your Dashboard</h1>
@@ -28,8 +26,6 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <Outlet />
-      </div>
   );
 };
 
