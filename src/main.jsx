@@ -6,7 +6,7 @@ import About from './pages/About.jsx';
 import Vans from './pages/Vans.jsx';
 import Error404 from './pages/Error404.jsx'; 
 import VanDetail from './pages/VanDetail.jsx';
-import dashboardLayout from "./pages/host/dashboardLayout.jsx";
+import DashLayout from "./pages/host/DashLayout.jsx";
 import './index.css';
 import Layout from './components/Layout.jsx';
 import Dashboard from './pages/host/Dashboard.jsx';
@@ -21,7 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes>
       <Route  path="/" element={<Layout />} >
         <Route Index element={<App />} />
-        <Route path="host" element={<Dashboard /> }>
+        <Route path="host" element={<DashLayout /> }>
+          <Route index element={<Dashboard /> } />
           <Route path="income" element={<Income />} />
           <Route path="reviews" element = {<Reviews />} />
         </Route>

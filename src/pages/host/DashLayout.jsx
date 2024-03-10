@@ -2,14 +2,13 @@ import { Outlet } from 'react-router-dom';
 import "./Dashboard.css";
 import Sidebar from './Sidebar';
 
-const dashboardLayout  = () => {
+const DashLayout  = () => {
   return (
     <div className="dashboard-container">
-      <h3>Dashboard</h3>
       <Sidebar />
       <Outlet />
     </div>
   );
 };
 
-export default dashboardLayout
+export default DashLayout
