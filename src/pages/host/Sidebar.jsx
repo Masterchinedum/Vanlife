@@ -7,7 +7,10 @@ const Sidebar = () => {
     <div className="sidebar">
       <h3>Dashboard</h3>
       <ul>
-        <li><Link to="/host"> Me </Link></li>
+        <li><NavLink to="/host"
+        className={({isActive}) => isActive ? "activeLink" : "otherLink"}
+        end> 
+        Me </NavLink></li>
         <li><NavLink to="/host/income"
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
         Income</NavLink></li>
