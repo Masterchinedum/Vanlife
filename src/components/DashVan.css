@@ -1,49 +1,63 @@
-.Dashvan {
+/* DashVan.css */
+
+.dash-van {
     display: flex;
+    align-items: center;
     height: 150px;
-    padding: 25px;
-    background-color: aquamarine;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px 5px;
-
-
-}
-
-.Dashvan > img {
+    transition: transform 0.3s ease;
+  
+  }
+  
+  .dash-van:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dash-van > img {
     height: 100%;
-}
-
-
-.van-info {
+    max-width: 150px;
+    margin-right: 15px;
+    border-radius: 8px;
+  }
+  
+  .van-info {
+    flex: 1;
     display: flex;
-    margin-top: 10px;
     justify-content: space-between;
-}
-
-.van-header {
+  }
+  
+  .van-header {
     padding-right: 30px;
-}
-
-.van-specs {
+  }
+  
+  .van-specs {
     padding-left: 30px;
-    font-size: 20px;
-}
-/* 
-.van-info h3 {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-.van-info p {
-    margin: 0;
-    font-size: 1em;
-}
-
-.van-type {
-    margin-top: 10px;
+  }
+  
+  .van-type {
     font-size: 0.8em;
     color: #777;
-}
-
-.van-type.selected {
-    color: #444;
-} */
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .van-type.campervan {
+    color: #6ab04c; /* Green color for campervan type */
+  }
+  
+  .van-type.minivan {
+    color: #f9a11e; /* Orange color for minivan type */
+  }
+  
+  .van-type.suv {
+    color: #d95d39; /* Red color for SUV type */
+  }
+  
+  .van-type.truck {
+    color: #3b5998; /* Blue color for truck type */
+  }
+  
