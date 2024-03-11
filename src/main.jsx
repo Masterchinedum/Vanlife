@@ -13,7 +13,7 @@ import Dashboard from './pages/host/Dashboard.jsx';
 import Income from './pages/host/Income.jsx';
 import Reviews from './pages/host/Reviews.jsx';
 import DashVans from './pages/host/DashVans.jsx';
-import DashVan from './pages/host/DashVan.jsx';
+import DashVandet from './pages/host/DashVandet.jsx';
 
 import('./server');
 
@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Dashboard /> } />
           <Route path="income" element={<Income />} />
           <Route path='vans' element = {<DashVans />} />
-          <Route path='vans/:vanId' element = {<DashVan />} />
+          <Route path='vans/:vanId' element = {<DashVandet />} />
           <Route path="reviews" element = {<Reviews />} />
         </Route>
         <Route path="about" element={<About />} />

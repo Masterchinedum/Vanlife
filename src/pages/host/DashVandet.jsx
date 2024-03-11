@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import './DashVandet.css';
 
-const DashVan = () => {
+const DashVandet = () => {
   const params = useParams();
   const [van, setVan] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -50,4 +50,4 @@ return (
 );
 }
 
-export default DashVan
+export default DashVandet
