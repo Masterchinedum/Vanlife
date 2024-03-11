@@ -9,22 +9,24 @@ const DashVandet = () => {
   const [loading, setLoading] = useState(true);
 
   // Fetch van data when component mounts.
-  useEffect(() => {
-    fetch(`/api/host/vans/${params.id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data && data.vans) {
-          setVan(data.vans);
-        } else {
-          console.error('Van details not found');
-        }
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching van details:', error);
-        setLoading(false);
-      });
-  }, [params.id]);
+// Fetch van data when component mounts.
+useEffect(() => {
+  fetch(`/api/host/vans/${params.id}`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.vans && data.vans.length > 0) {
+        setVan(data.vans[0]); // Set the first van in the array
+      } else {
+        console.error('Van details not found');
+      }
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.error('Error fetching van details:', error);
+      setLoading(false);
+    });
+}, [params.id]);
+
 
   if (loading) {
     return <h2>Loading...</h2>;
