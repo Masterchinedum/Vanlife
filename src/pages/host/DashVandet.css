@@ -1,46 +1,52 @@
-/* DashVandet.css
+/* DashVandet.css */
 
-.van-detail-container {
+.dash-vandet-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
   
-  .van-detail {
+  .dash-vandet-card {
     max-width: 600px;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa;
+    background-color: #f0f0f0;
     text-align: center;
   }
   
-  .van-detail img {
+  .dash-vandet-img {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 20px;
   }
   
-  .van-type {
-    font-size: 0.8em;
-    color: #777;
+  .dash-vandet-type {
+    font-size: 0.9em;
+    color: #555;
     text-transform: uppercase;
     font-weight: bold;
   }
   
-  .van-price {
+  .dash-vandet-name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+  }
+  
+  .dash-vandet-price {
     margin: 10px 0;
     font-size: 1.2em;
   }
   
-  .van-detail p {
+  .dash-vandet-description {
     margin-bottom: 20px;
   }
   
-  .link-button {
+  .dash-vandet-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -50,7 +56,7 @@
     transition: background-color 0.3s;
   }
   
-  .link-button:hover {
+  .dash-vandet-button:hover {
     background-color: #0056b3;
   }
-   */
+  
