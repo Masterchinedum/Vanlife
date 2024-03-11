@@ -1,3 +1,4 @@
+// VanDetail.jsx
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -37,19 +38,17 @@ function VanDetail() {
     const { imageUrl, type, price, description } = van;
 
     return (
-        <div className="van-detail-container">
-            <div className="van-detail">
-                <img src={imageUrl} alt={van.name} />
+        <div className="van-detail-main-container ">
+            <div className="van-detail-card">
+                <img src={imageUrl} alt={van.name} className="van-detail-img" />
                 <i className={`van-type ${type} selected`}>{type}</i>
-                <h2>{van.name}</h2>
+                <h2 className="van-name">{van.name}</h2>
                 <p className="van-price"><span>${price}</span>/day</p>
-                <p>{description}</p>
-                <button className={`link-button ${type}`}>Rent this van</button>
+                <p className="van-description">{description}</p>
+                <button className={`rent-button ${type} rent-button-${params.id}`}>Rent this van</button>
             </div>
         </div>
     );
 }
-
-
 
 export default VanDetail
