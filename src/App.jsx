@@ -1,4 +1,5 @@
 import './App.css'
+import Vans from './pages/Vans'
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
         <div className = 'heroBtnc'>
           <button className='heroBtn center'>Find your van</button>
         </div>
+      </div>
+      <div>
+        <Vans />
       </div>
     </>
   )
