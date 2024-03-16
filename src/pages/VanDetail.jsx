@@ -10,21 +10,28 @@ function VanDetail() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setLoading(true);
-        fetch(`/api/vans/${params.id}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data && data.vans) {
-                    setVan(data.vans);
-                } else {
-                    console.error("Van details not found");
-                }
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error("Error fetching van details:", error);
-                setLoading(false);
-            });
+        const storedVan = localStorage.getItem(`van_${params.id}`);
+        if (storedVan) {
+            setVan(JSON.parse(storedVan));
+            setLoading(false);
+        } else {
+            setLoading(true);
+            fetch(`/api/vans/${params.id}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data && data.van) {
+                        setVan(data.van);
+                        localStorage.setItem(`van_${params.id}`, JSON.stringify(data.van));
+                    } else {
+                        console.error("Van details not found");
+                    }
+                    setLoading(false);
+                })
+                .catch(error => {
+                    console.error("Error fetching van details:", error);
+                    setLoading(false);
+                });
+        }
     }, [params.id]);
 
     if (loading) {
@@ -51,4 +58,4 @@ function VanDetail() {
     );
 }
 
-export default VanDetail
+export default VanDetail;
