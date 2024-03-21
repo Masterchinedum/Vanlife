@@ -11,7 +11,7 @@ function VanDetail() {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`/api/vans/${params.id}`)
+        fetch(`/api/vans/${params.vanId}`)
             .then(res => res.json())
             .then(data => {
                 if (data && data.vans) {

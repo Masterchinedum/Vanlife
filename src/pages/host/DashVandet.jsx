@@ -11,7 +11,7 @@ const DashVandet = () => {
   // Fetch van data when component mounts.
 // Fetch van data when component mounts.
 useEffect(() => {
-  fetch(`/api/host/vans/${params.id}`)
+  fetch(`/api/host/vans/${params.vanId}`)
     .then((response) => response.json())
     .then((data) => {
       if (data && data.vans && data.vans.length > 0) {

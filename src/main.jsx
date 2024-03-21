@@ -32,7 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
         <Route path="about" element={<About />} />
         <Route path="vans" element={<Vans />} />
-        <Route path="vans/:id" element={<VanDetail />} />
+        <Route path="vans/:vanId" element={<VanDetail />} />
         <Route path="*" element={<Error404 />} /> {/* Render the Error404 component for any unmatched route */}
       </Route>
     </Routes>
