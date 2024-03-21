@@ -3,7 +3,7 @@
 .navbar {
   background-color: #f8f9fa; /* Light background color */
   color: #333; /* Text color */
-  padding: 1rem;
+
 }
 
 .navbar__container {
@@ -47,4 +47,26 @@
 
 .otherLink {
   background-color: #f8f9fa; /* Light background for other links */
+}
+
+.top-bar {
+  background: linear-gradient(40deg, #0072bc 85%, #ffffff 15%);  color: #ffffff;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item {
+  margin-right: 10px;
+}
+
+.contact-item:not(:last-child)::after {
+  margin-left: 10px;
 }

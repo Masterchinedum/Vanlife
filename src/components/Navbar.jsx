@@ -4,6 +4,13 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <header className="navbar">
+    <div className="top-bar">
+      <div className="contact-info">
+        <span className="contact-item">+1234 5678 9012</span>
+        <span className="contact-item">info@example.com</span>
+        <span className="contact-item">Plot 888 Bishop Adoguqa Crib Street Victoria Island, Lagos, Nigeria</span>
+      </div>
+    </div>
       <nav className="navbar__container">
         <Link to = '/'>
           <img src={logo} alt="Vanlife Logo" className="navbar__logo" />
