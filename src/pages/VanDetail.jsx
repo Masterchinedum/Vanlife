@@ -25,7 +25,7 @@ function VanDetail() {
                 console.error("Error fetching van details:", error);
                 setLoading(false);
             });
-    }, [params.id]);
+    }, [params.vanId]);
 
     if (loading) {
         return <h2>Loading...</h2>;
@@ -45,7 +45,7 @@ function VanDetail() {
                 <h2 className="van-name">{van.name}</h2>
                 <p className="van-price"><span>${price}</span>/day</p>
                 <p className="van-description">{description}</p>
-                <button className={`rent-button ${type} rent-button-${params.id}`}>Rent this van</button>
+                <button className={`rent-button ${type} rent-button-${params.vanId}`}>Rent this van</button>
             </div>
         </div>
     );
