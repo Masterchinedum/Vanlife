@@ -25,7 +25,7 @@ useEffect(() => {
       console.error('Error fetching van details:', error);
       setLoading(false);
     });
-}, [params.id]);
+}, [params.vanId]);
 
 
   if (loading) {
