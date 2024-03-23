@@ -6,17 +6,17 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <li><NavLink to="/host"
+        <li><NavLink to="."
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}
         end> 
         Dashboard </NavLink></li>
-        <li><NavLink to="/host/income"
+        <li><NavLink to="income"
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
         Income</NavLink></li>
-        <li><NavLink to="/host/vans"
+        <li><NavLink to="vans"
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
         Vans </NavLink></li>
-        <li><NavLink to="/host/reviews"
+        <li><NavLink to="reviews"
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}>
         Reviews</NavLink></li>
       </ul>
