@@ -40,7 +40,21 @@ useEffect(() => {
 
   return (
     <div className="dash-vandet-container">
-      <div className="dash-vandet-card">
+      <div className='dash-van-head'>
+        <img src={imageUrl} alt={van.name} className="dash-vandet-img" />
+        <div className='dash-van-head-text'>
+          <i className={`dash-vandet-type ${type} selected`}>{type}</i>
+          <h2 className="dash-vandet-name">{van.name}</h2>
+          <p className="dash-vandet-price">
+            <span>${price}</span>/day
+          </p>
+        </div>
+      </div>
+      <div  className="dash-vandet-body">
+        <p className="dash-vandet-description">{description}</p>
+        <button className={`dash-vandet-button ${type}`}>Rent this van</button>
+      </div>
+      {/* <div className="dash-vandet-card">
         <img src={imageUrl} alt={van.name} className="dash-vandet-img" />
         <i className={`dash-vandet-type ${type} selected`}>{type}</i>
         <h2 className="dash-vandet-name">{van.name}</h2>
@@ -49,7 +63,7 @@ useEffect(() => {
         </p>
         <p className="dash-vandet-description">{description}</p>
         <button className={`dash-vandet-button ${type}`}>Rent this van</button>
-      </div>
+      </div> */}
     </div>
   );
 };
