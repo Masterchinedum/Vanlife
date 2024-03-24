@@ -1,6 +1,6 @@
 // DashVandet.jsx
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './DashVandet.css';
 
 const DashVandet = () => {
@@ -39,32 +39,28 @@ useEffect(() => {
   const { imageUrl, type, price, description } = van;
 
   return (
-    <div className="dash-vandet-container">
-      <div className='dash-van-head'>
-        <img src={imageUrl} alt={van.name} className="dash-vandet-img" />
-        <div className='dash-van-head-text'>
-          <i className={`dash-vandet-type ${type} selected`}>{type}</i>
-          <h2 className="dash-vandet-name">{van.name}</h2>
-          <p className="dash-vandet-price">
-            <span>${price}</span>/day
-          </p>
+    <section>
+      <Link
+                to="?"
+                className="back-button"
+            >&larr; <span>Back to all vans</span></Link>
+      <div className="dash-vandet-container">
+        <div className='dash-van-head'>
+          <img src={imageUrl} alt={van.name} className="dash-vandet-img" />
+          <div className='dash-van-head-text'>
+            <i className={`dash-vandet-type ${type} selected`}>{type}</i>
+            <h2 className="dash-vandet-name">{van.name}</h2>
+            <p className="dash-vandet-price">
+              <span>${price}</span>/day
+            </p>
+          </div>
+        </div>
+        <div  className="dash-vandet-body">
+          <p className="dash-vandet-description">{description}</p>
+          <button className={`dash-vandet-button ${type}`}>Rent this van</button>
         </div>
       </div>
-      <div  className="dash-vandet-body">
-        <p className="dash-vandet-description">{description}</p>
-        <button className={`dash-vandet-button ${type}`}>Rent this van</button>
-      </div>
-      {/* <div className="dash-vandet-card">
-        <img src={imageUrl} alt={van.name} className="dash-vandet-img" />
-        <i className={`dash-vandet-type ${type} selected`}>{type}</i>
-        <h2 className="dash-vandet-name">{van.name}</h2>
-        <p className="dash-vandet-price">
-          <span>${price}</span>/day
-        </p>
-        <p className="dash-vandet-description">{description}</p>
-        <button className={`dash-vandet-button ${type}`}>Rent this van</button>
-      </div> */}
-    </div>
+    </section>
   );
 };
 
