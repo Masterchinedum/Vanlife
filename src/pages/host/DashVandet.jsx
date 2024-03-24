@@ -41,7 +41,8 @@ useEffect(() => {
   return (
     <section>
       <Link
-                to="../vans"
+                to=".."
+                relative = "path"
                 className="back-button"
             >&larr; <span>Back to all vans</span></Link>
       <div className="dash-vandet-container">
