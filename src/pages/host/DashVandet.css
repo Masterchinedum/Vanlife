@@ -1,15 +1,16 @@
-/* General Styles */
+/* DashVandet.css */
+
 .dash-vandet-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
   padding: 2rem;
-  background-color: #f2f2f2;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-/* Header Section */
 .dash-van-head {
   display: flex;
   align-items: center;
@@ -17,97 +18,76 @@
 }
 
 .dash-vandet-img {
-  width: 300px;
+  width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   margin-right: 2rem;
 }
 
 .dash-van-head-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex: 1;
 }
 
 .dash-vandet-type {
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
-}
-
-.dash-vandet-type.simple {
-  background-color: #e6e6e6;
-  color: #333;
-}
-
-.dash-vandet-type.rugged {
-  background-color: #d59567;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
   color: #fff;
 }
 
-.dash-vandet-type.luxury {
-  background-color: #d6a347;
-  color: #fff;
+.dash-vandet-type.selected {
+  /* Add a background color based on van type (e.g., blue for car, green for campervan) */
+  background-color: teal;
 }
 
 .dash-vandet-name {
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .dash-vandet-price {
-  font-size: 1.2rem;
   font-weight: bold;
-}
-
-.dash-vandet-price span {
-  font-size: 1.5rem;
-  color: #d59567;
-}
-
-/* Body Section */
-.dash-vandet-body {
-  width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 .dash-vandet-description {
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .dash-vandet-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 2rem;
+  background-color: teal; /* Adjust to match selected type background color */
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dash-vandet-button.simple {
-  background-color: #e6e6e6;
-  color: #333;
-}
-
-.dash-vandet-button.rugged {
-  background-color: #d59567;
-  color: #fff;
-}
-
-.dash-vandet-button.luxury {
-  background-color: #d6a347;
-  color: #fff;
+  transition: all 0.2s ease-in-out;
 }
 
 .dash-vandet-button:hover {
-  background-color: #333;
-  color: #fff;
+  opacity: 0.8;
 }
+
+/* You can uncomment this section if you prefer the commented-out card layout in JSX */
+
+/*.dash-vandet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}*/
+
+/*.dash-vandet-card .dash-vandet-img {
+  margin-bottom: 1rem;
+}*/
