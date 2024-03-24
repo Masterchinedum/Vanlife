@@ -90,6 +90,7 @@
 
 /* Optional styling for commented-out section (can be removed) */
 
-/* .dash-vandet-card {
+.dash-vandet-card {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   /* You can add specific styles for the card layout if needed */
-} */
+}
