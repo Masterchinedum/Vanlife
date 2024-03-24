@@ -1,16 +1,15 @@
-/* DashVandet.css */
-
+/* dash-vandet-container styles */
 .dash-vandet-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 80%;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
   margin: 0 auto;
   padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  box-sizing: border-box;
 }
 
+/* dash-van-head styles */
 .dash-van-head {
   display: flex;
   align-items: center;
@@ -21,7 +20,7 @@
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px; /* Add border radius for rounded corners */
   margin-right: 2rem;
 }
 
@@ -29,65 +28,71 @@
   flex: 1;
 }
 
+/* dash-vandet-type styles */
 .dash-vandet-type {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  display: inline-block;
+  margin-right: 1rem;
   padding: 5px 10px;
   border-radius: 5px;
-  display: inline-block;
   color: #fff;
-}
-
-.dash-vandet-type.selected {
-  /* Add a background color based on van type (e.g., blue for car, green for campervan) */
-  background-color: teal;
-}
-
-.dash-vandet-name {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.dash-vandet-price {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.selected { /* Style for the selected type */
+  background-color: #007bff; /* Adjust based on your color scheme */
+}
+
+/* Type specific styling (adjust as needed) */
+.car {
+  background-color: #28a745;
+}
+
+.bus {
+  background-color: #ffc107;
+}
+
+.truck {
+  background-color: #6c757d;
+}
+
+/* dash-vandet-name styles */
+.dash-vandet-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* dash-vandet-price styles */
+.dash-vandet-price {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* dash-vandet-body styles */
+.dash-vandet-body {
+  flex: 1;
 }
 
 .dash-vandet-description {
-  font-size: 1rem;
-  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
+/* dash-vandet-button styles */
 .dash-vandet-button {
-  background-color: teal; /* Adjust to match selected type background color */
+  background-color: #007bff; /* Adjust based on your color scheme */
   color: #fff;
   padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  font-weight: bold;
 }
 
-.dash-vandet-button:hover {
-  opacity: 0.8;
+/* Button specific styling (adjust as needed) */
+.car,
+.bus,
+.truck { /* Inherit styling from selected class for type-based buttons */
+  background-color: inherit;
 }
-
-/* You can uncomment this section if you prefer the commented-out card layout in JSX */
-
-/*.dash-vandet-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  margin: 0 auto;
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}*/
-
-/*.dash-vandet-card .dash-vandet-img {
-  margin-bottom: 1rem;
-}*/
