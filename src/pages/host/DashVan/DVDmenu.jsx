@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import "./DVDmenu.css";
 
 
 const DVDmenu = () => {
   return (
-    <div className="sidebar">
-      <ul>
+    <div className="DVDmenucontainer">
+      <ul className='dvdMenu'>
         <li><NavLink to="description"
         relative='path'
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}

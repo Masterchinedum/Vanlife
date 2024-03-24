@@ -1,0 +1,57 @@
+/* DVDmenu.css */
+
+.DVDmenucontainer {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  }
+  
+  .dvdMenu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+    overflow: hidden;
+  }
+  
+  .dvdMenu li {
+    flex: 1; /* Each menu item takes up equal space */
+  }
+  
+  .dvdMenu li a {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .dvdMenu li a:hover {
+    background-color: #ddd;
+  }
+  
+  .activeLink {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .otherLink {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .dvdMenu {
+      flex-direction: column; /* Change to vertical layout on small screens */
+    }
+  
+    .dvdMenu li {
+      flex: none; /* Reset flex to default */
+    }
+  
+    .DVDmenucontainer {
+      overflow-x: hidden; /* Disable horizontal scrolling on small screens */
+    }
+  }
+  
