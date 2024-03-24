@@ -1,6 +1,7 @@
 // DashVandet.jsx
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, Outlet } from 'react-router-dom';
+import DVDmenu from './DVDmenu';
 import './DashVandet.css';
 
 const DashVandet = () => {
@@ -36,11 +37,11 @@ useEffect(() => {
     return <h2>Van not found</h2>;
   }
 
-  const { imageUrl, type, price, description } = van;
+  const { imageUrl, type, price } = van;
 
   return (
     <section>
-      <Link
+      {/* <Link
                 to=".."
                 relative = "path"
                 className="back-button"
@@ -56,11 +57,10 @@ useEffect(() => {
             </p>
           </div>
         </div>
-        <div  className="dash-vandet-body">
-          <p className="dash-vandet-description">{description}</p>
-          <button className={`dash-vandet-button ${type}`}>Rent this van</button>
-        </div>
-      </div>
+        <DVDmenu />
+        <Outlet />
+      </div> */}
+      <h1> hello there once again </h1>
     </section>
   );
 };

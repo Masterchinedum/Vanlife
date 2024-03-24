@@ -1,10 +1,8 @@
-import {van} from './DashVandet.jsx';
-
-const description = van.description;
+import React from 'react'
 
 const DvDetail = () => {
   return (
-    <div>{description}</div>
+    <div>DvDetail</div>
   )
 }
 

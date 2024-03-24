@@ -1,10 +1,8 @@
-import {van} from './DashVandet.jsx';
-
-const imageUrl = van.imageUrl;
+import React from 'react'
 
 const DVDImage = () => {
   return (
-    <div>{imageUrl}</div>
+    <div>DVDImage</div>
   )
 }
 

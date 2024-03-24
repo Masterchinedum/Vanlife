@@ -1,11 +1,9 @@
-import {van} from './DashVandet.jsx';
+import React from 'react'
 
-const price = van.price;
-
-const DvDetail = () => {
+const DvDPrice = () => {
   return (
-    <div>{price}</div>
+    <div>DvDPrice</div>
   )
 }
 
-export default DvDetail
+export default DvDPrice

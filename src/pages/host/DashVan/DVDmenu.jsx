@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import "./Sidebar.css";
 
 
-const Sidebar = () => {
+const DVDmenu = () => {
   return (
     <div className="sidebar">
       <ul>
@@ -24,4 +23,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default DVDmenu;
