@@ -11,7 +11,6 @@ const DashVans = () => {
       .catch((error) => console.error("Error fetching vans:", error));
   }, []);
 
-  
   return (
     <div>
       <h1>Vans You're Hosting</h1>

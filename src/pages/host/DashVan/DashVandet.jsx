@@ -38,6 +38,7 @@ useEffect(() => {
   }
 
   const { imageUrl, type, price, description } = van;
+  
 
   return (
     <section>
