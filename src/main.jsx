@@ -1,3 +1,5 @@
+//main.jsx
+
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'; // Import Navigate directly
 
