@@ -16,6 +16,9 @@ import Income from './pages/host/Income.jsx';
 import Reviews from './pages/host/Reviews.jsx';
 import DashVans from './pages/host/DashVans.jsx';
 import DashVandet from './pages/host/DashVan/DashVandet.jsx';
+import DvDetail from './pages/host/DashVan/DvDetail.jsx';
+import DvDPrice from './pages/host/DashVan/DvDPrice.jsx';
+import DVDImage from './pages/host/DashVan/DVDImage.jsx';
 
 import('./server');
 
@@ -29,7 +32,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Dashboard /> } />
           <Route path="income" element={<Income />} />
           <Route path='vans' element = {<DashVans />} />
-          <Route path='vans/:vanId' element = {<DashVandet />} />
+          <Route path='vans/:vanId' element = {<DashVandet />} >
+            <Route path='description' element = {<DvDetail />} />
+            <Route path='price' element = {<DvDPrice />} />
+            <Route path = "images" element = {<DVDImage />} />
+          </Route>
           <Route path="reviews" element = {<Reviews />} />
         </Route>
         <Route path="about" element={<About />} />
