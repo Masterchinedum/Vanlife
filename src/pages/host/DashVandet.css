@@ -1,19 +1,23 @@
 /* DashVandet.css */
-
 .dash-vandet-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 768px; /* Set a maximum width for responsiveness */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 500px; /* Set a maximum width for responsiveness */
+  margin: 50px auto; /* Center the container horizontally */
   padding: 2rem; /* Add some padding for spacing */
   box-sizing: border-box; /* Ensure padding doesn't affect width */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow to create a pop-out effect */
+  border-radius: 10px; /* Add some rounded corners */
+  overflow: hidden; /* Hide the blur effect outside the container */
 }
+
 
 .dash-van-head {
   display: flex;
   align-items: center;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
@@ -38,18 +42,17 @@
   font-weight: bold;
 }
 
-.dash-vandet-type.cargo {
-  background-color: #007bff; /* Blue background for cargo vans */
+/* .dash-vandet-type.cargo {
+  background-color: #007bff;
 }
 
 .dash-vandet-type.passenger {
-  background-color: #28a745; /* Green background for passenger vans */
+  background-color: #28a745; 
 }
 
 .dash-vandet-type.selected {
-  /* Add a slight border to highlight the selected type */
   border: 1px solid #ddd;
-}
+} */
 
 .dash-vandet-name {
   margin: 0.5rem 0;
@@ -64,6 +67,7 @@
 .dash-vandet-description {
   margin-bottom: 1rem;
   line-height: 1.5; /* Increase line spacing for readability */
+  text-align: left;
 }
 
 .dash-vandet-button {
@@ -78,19 +82,4 @@
 
 .dash-vandet-button:hover {
   background-color: #1e7c3c; /* Darken button color on hover */
-}
-
-.dash-vandet-button.cargo {
-  background-color: #007bff; /* Blue button color for cargo vans */
-}
-
-.dash-vandet-button.cargo:hover {
-  background-color: #0062cc; /* Darken blue button color on hover */
-}
-
-/* Optional styling for commented-out section (can be removed) */
-
-.dash-vandet-card {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  /* You can add specific styles for the card layout if needed */
 }
