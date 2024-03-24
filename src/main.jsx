@@ -15,7 +15,7 @@ import Dashboard from './pages/host/Dashboard.jsx';
 import Income from './pages/host/Income.jsx';
 import Reviews from './pages/host/Reviews.jsx';
 import DashVans from './pages/host/DashVans.jsx';
-import DashVandet from './pages/host/DashVandet.jsx';
+import DashVandet from './pages/host/DashVan/DashVandet.jsx';
 
 import('./server');
 
