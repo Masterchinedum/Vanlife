@@ -1,57 +1,61 @@
-/* DVDmenu.css */
-
+/* General Styles */
 .DVDmenucontainer {
-    width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
   
   .dvdMenu {
     display: flex;
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     margin: 0;
-    background-color: #f1f1f1;
+    padding: 0;
+    background-color: #f2f2f2;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
   
   .dvdMenu li {
-    flex: 1; /* Each menu item takes up equal space */
+    margin: 0;
   }
   
   .dvdMenu li a {
     display: block;
-    text-align: center;
-    padding: 14px 20px;
+    padding: 1rem 2rem;
     text-decoration: none;
-    color: black;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   
   .dvdMenu li a:hover {
     background-color: #ddd;
   }
   
-  .activeLink {
-    background-color: #007bff;
-    color: white;
+  .dvdMenu li a.activeLink {
+    background-color: #333;
+    color: #fff;
   }
   
-  .otherLink {
-    background-color: #f1f1f1;
-    color: black;
-  }
-  
-  /* Media query for small screens */
+  /* Responsive Styles */
   @media (max-width: 768px) {
     .dvdMenu {
-      flex-direction: column; /* Change to vertical layout on small screens */
+      flex-wrap: wrap;
     }
   
     .dvdMenu li {
-      flex: none; /* Reset flex to default */
+      flex: 1 1 33.33%;
     }
   
-    .DVDmenucontainer {
-      overflow-x: hidden; /* Disable horizontal scrolling on small screens */
+    .dvdMenu li a {
+      text-align: center;
+      padding: 0.5rem 1rem;
     }
   }
   
+  @media (max-width: 480px) {
+    .dvdMenu li {
+      flex: 1 1 100%;
+    }
+  }
