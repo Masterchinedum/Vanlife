@@ -1,10 +1,10 @@
 import {van} from './DashVandet.jsx';
 
-const description = van.description;
+const price = van.price;
 
 const DvDetail = () => {
   return (
-    <div>{description}</div>
+    <div>{price}</div>
   )
 }
 
