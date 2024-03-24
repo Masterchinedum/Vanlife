@@ -1,62 +1,76 @@
 /* DashVandet.css */
-
 .dash-vandet-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .dash-vandet-card {
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f0f0f0;
-    text-align: center;
-  }
-  
-  .dash-vandet-img {
-    width: 100%;
-    max-height: 310px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 20px;
-  }
-  
-  .dash-vandet-type {
-    font-size: 0.9em;
-    color: #555;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  .dash-vandet-name {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 1.5em;
-  }
-  
-  .dash-vandet-price {
-    margin: 10px 0;
-    font-size: 1.2em;
-  }
-  
-  .dash-vandet-description {
-    margin-bottom: 20px;
-  }
-  
-  .dash-vandet-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .dash-vandet-button:hover {
-    background-color: #0056b3;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dash-van-head {
+  display: flex;
+  align-items: center;
+}
+
+.dash-vandet-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.dash-van-head-text {
+  flex: 1;
+}
+
+.dash-vandet-type {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dash-vandet-name {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.dash-vandet-price {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.dash-vandet-body {
+  margin-top: 20px;
+}
+
+.dash-vandet-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.dash-vandet-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dash-vandet-button:hover {
+  background-color: #0056b3;
+}
+
+/* Type-specific styles */
+.dash-vandet-type.Camper {
+  color: #28a745;
+}
+
+.dash-vandet-type.SUV {
+  color: #17a2b8;
+}
+
+.dash-vandet-type.Sedan {
+  color: #dc3545;
+}
