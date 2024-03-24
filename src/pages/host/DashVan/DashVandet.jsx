@@ -37,11 +37,11 @@ useEffect(() => {
     return <h2>Van not found</h2>;
   }
 
-  const { imageUrl, type, price } = van;
+  const { imageUrl, type, price, description } = van;
 
   return (
     <section>
-      {/* <Link
+      <Link
                 to=".."
                 relative = "path"
                 className="back-button"
@@ -59,8 +59,7 @@ useEffect(() => {
         </div>
         <DVDmenu />
         <Outlet />
-      </div> */}
-      <h1> hello there once again </h1>
+      </div>
     </section>
   );
 };
