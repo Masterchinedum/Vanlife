@@ -6,7 +6,7 @@ const DvDetail = () => {
 
   return (
     <div>
-      <p>{imageUrl}</p>
+      <img src={imageUrl} alt={van.name} className="dash-vandet-img" />
     </div>
   );
 };
