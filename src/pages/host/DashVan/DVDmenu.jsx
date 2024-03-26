@@ -6,7 +6,7 @@ const DVDmenu = () => {
   return (
     <div className="DVDmenucontainer">
       <ul className='dvdMenu'>
-        <li><NavLink to="description"
+        <li><NavLink to="."
         relative='path'
         className={({isActive}) => isActive ? "activeLink" : "otherLink"}
         end> 

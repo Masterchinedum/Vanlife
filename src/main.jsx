@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="income" element={<Income />} />
           <Route path='vans' element = {<DashVans />} />
           <Route path='vans/:vanId' element = {<DashVandet />} >
-            <Route path='description' element = {<DvDetail />} />
+            <Route index element = {<DvDetail />} />
             <Route path='price' element = {<DvDPrice />} />
             <Route path = "images" element = {<DVDImage />} />
           </Route>
