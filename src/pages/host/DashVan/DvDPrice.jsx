@@ -1,13 +1,9 @@
-import { useOutletContext } from "react-router-dom";
-
-const [van, setVan] = useOutletContext();
-const price = () => setVan(van.price);
 
 const DvDPrice = () => {
   return (
     <div>
         <h3>Pricing is described here</h3>
-        <p>${price}</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, labore! Magni iure maxime, sunt tenetur deserunt ad autem dolorem consectetur quia quidem ratione, eos tempora maiores quo. Maxime, alias temporibus.</p>
     </div>
   )
 }
