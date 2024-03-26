@@ -59,7 +59,7 @@ useEffect(() => {
           </div>
         </div>
         <DVDmenu />
-        <Outlet context= {[van, setVan]}/>
+        <Outlet context={[van, setVan]} />
       </div>
     </section>
   );

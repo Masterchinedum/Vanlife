@@ -1,12 +1,14 @@
-import React from 'react'
+import { useOutletContext } from 'react-router-dom';
 
-const DVDImage = () => {
+const DvDetail = () => {
+  const [van] = useOutletContext();
+  const { imageUrl } = van;
+
   return (
     <div>
-        <h3>Images are shown here</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam provident tempora doloremque, eveniet vel. Eaque, pariatur. Asperiores ipsum, quam fugit temporibus dolorem iusto! Ipsa temporibus quia reiciendis nobis harum?</p>
+      <p>{imageUrl}</p>
     </div>
-  )
-}
+  );
+};
 
-export default DVDImage
+export default DvDetail;

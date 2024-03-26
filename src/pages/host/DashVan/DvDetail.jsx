@@ -1,12 +1,14 @@
-import React from 'react'
+import { useOutletContext } from 'react-router-dom';
 
 const DvDetail = () => {
+  const [van] = useOutletContext();
+  const { description } = van;
+
   return (
     <div>
-      <h3>Detailed description here</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid id illo, molestias ipsum recusandae vero, architecto ab facere itaque quibusdam placeat accusamus nisi minus enim laboriosam eius illum fugiat dolore.</p>
+      <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default DvDetail
+export default DvDetail;
