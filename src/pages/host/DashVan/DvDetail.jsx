@@ -1,7 +1,7 @@
 import { useOutletContext } from 'react-router-dom';
 
 const DvDetail = () => {
-  const [van] = useOutletContext();
+  const {van} = useOutletContext();
   const { description } = van;
 
   return (
