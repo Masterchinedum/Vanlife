@@ -1,10 +1,12 @@
-import React from 'react'
+import { useOutletContext } from "react-router-dom";
+
+const van = useOutletContext().data.van;
 
 const DvDPrice = () => {
   return (
     <div>
         <h3>Pricing is described here</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, labore! Magni iure maxime, sunt tenetur deserunt ad autem dolorem consectetur quia quidem ratione, eos tempora maiores quo. Maxime, alias temporibus.</p>
+        <p>${van.price}</p>
     </div>
   )
 }
