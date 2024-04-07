@@ -1,59 +1,84 @@
-.error-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+/* Error404.css */
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.error-content {
+  max-width: 600px;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.error-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.error-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.error-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.error-btn-primary {
+  background-color: #fff;
+  color: #667eea;
+}
+
+.error-btn-secondary {
+  background-color: #fff;
+  color: #764ba2;
+}
+
+.error-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.error-image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.error-image {
+  max-width: 100%;
+  max-height: 100%;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: #333;
+  to {
+    transform: rotate(360deg);
   }
-  
-  p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
-  .error-actions {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 40px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-    color: #fff;
-  }
-  
-  .error-image {
-    width: 300px;
-    margin-top: 2rem;
-    animation: spin 5s linear infinite;
-  }
-  
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
+}
