@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from "react";
 import Van from "../components/Van";
-import './Vans.css';
+import "./Vans.css";
 
 function Vans() {
   const [vans, setVans] = useState([]);
 
-  useEffect(() => {
-    const storedVans = localStorage.getItem('vans');
-    if (storedVans) {
-      setVans(JSON.parse(storedVans));
-    } else {
-      fetch("/api/vans")
-        .then((response) => response.json())
-        .then((data) => {
-          setVans(data.vans);
-          localStorage.setItem('vans', JSON.stringify(data.vans));
-        })
-        .catch((error) => console.error("Error fetching vans:", error));
+  const fetchVansData = async () => {
+    try {
+      const storedVans = localStorage.getItem("vans");
+
+      if (storedVans) {
+        setVans(JSON.parse(storedVans));
+      } else {
+        const response = await fetch("/api/vans");
+        const data = await response.json();
+
+        setVans(data.vans);
+        localStorage.setItem("vans", JSON.stringify(data.vans));
+      }
+    } catch (error) {
+      console.error("Error fetching vans:", error);
     }
+  };
+
+  useEffect(() => {
+    fetchVansData();
   }, []);
-  
 
   return (
     <div className="container">
