@@ -4,10 +4,17 @@ import Van from "../components/Van";
 import "./Vans.css";
 
 function Vans() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get("type")
   const [vans, setVans] = useState([]);
 
+  useEffect(() => {
+    if (queryParam) {
+      const filteredVans = vans.filter((van) => van.type === queryParam);
+      setVans(filteredVans);
+    }
+  }, [queryParam, vans]);
+  
   const fetchVansData = async () => {
     try {
       const storedVans = localStorage.getItem("vans");
