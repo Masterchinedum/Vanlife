@@ -44,12 +44,20 @@ function Vans() {
     }
   };
 
-  // Pagination Logic
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredVans.slice(indexOfFirstItem, indexOfLastItem);
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const handleItemsPerPageChange = (event) => {
+    setItemsPerPage(parseInt(event.target.value));
+    setCurrentPage(1); // Reset to the first page when changing items per page
+  };
+
+  const indexOfLastVan = currentPage * itemsPerPage;
+  const indexOfFirstVan = indexOfLastVan - itemsPerPage;
+  const currentVans = filteredVans.slice(indexOfFirstVan, indexOfLastVan);
+
+  const totalPages = Math.ceil(filteredVans.length / itemsPerPage);
 
   return (
     <div className="container">
@@ -58,35 +66,52 @@ function Vans() {
         <button className="All" onClick={() => filterVansByType(null, vans)}>
           All
         </button>
-        <button className="simple" onClick={() => filterVansByType("simple", vans)}>
+        <button
+          className="simple"
+          onClick={() => filterVansByType("simple", vans)}
+        >
           Simple
         </button>
-        <button className="rugged" onClick={() => filterVansByType("rugged", vans)}>
+        <button
+          className="rugged"
+          onClick={() => filterVansByType("rugged", vans)}
+        >
           Rugged
         </button>
-        <button className="luxury" onClick={() => filterVansByType("luxury", vans)}>
+        <button
+          className="luxury"
+          onClick={() => filterVansByType("luxury", vans)}
+        >
           Luxury
         </button>
       </div>
+      <div className="pagination-controls">
+        <label>
+          Items per page:
+          <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
+            <option value="6">6</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+          </select>
+        </label>
+      </div>
       <div className="vans-container">
-        {currentItems.map((van) => (
+        {currentVans.map((van) => (
           <Van key={van.id} van={van} />
         ))}
       </div>
       <div className="pagination">
-        {Array.from({ length: Math.ceil(filteredVans.length / itemsPerPage) }, (_, i) => (
-          <button key={i + 1} onClick={() => paginate(i + 1)} className={currentPage === i + 1 ? "active" : ""}>
-            {i + 1}
+        {Array.from(Array(totalPages).keys()).map((pageNumber) => (
+          <button
+            key={pageNumber}
+            className={`pagination-button ${
+              currentPage === pageNumber + 1 ? "active" : ""
+            }`}
+            onClick={() => handlePageChange(pageNumber + 1)}
+          >
+            {pageNumber + 1}
           </button>
         ))}
-      </div>
-      <div className="items-per-page">
-        Items per page:
-        <select value={itemsPerPage} onChange={(e) => setItemsPerPage(parseInt(e.target.value))}>
-          <option value="6">6</option>
-          <option value="9">9</option>
-          <option value="12">12</option>
-        </select>
       </div>
     </div>
   );
