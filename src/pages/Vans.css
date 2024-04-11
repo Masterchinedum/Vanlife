@@ -28,6 +28,11 @@
   transition: background-color 0.3s;
 }
 
+.All {
+  background-color: #15f327;
+
+}
+
 
 .filter-buttons button:hover {
   background-color: #555;
