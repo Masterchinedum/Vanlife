@@ -20,7 +20,6 @@
 }
 
 .filter-buttons button {
-  background-color: #333;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -28,6 +27,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 
 .filter-buttons button:hover {
   background-color: #555;
