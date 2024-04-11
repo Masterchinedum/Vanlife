@@ -7,24 +7,25 @@ function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get("type");
   const [vans, setVans] = useState([]);
+  const [filteredVans, setFilteredVans] = useState([]);
 
-  const fetchVansData = async (type) => {
+  useEffect(() => {
+    fetchVansData();
+  }, []);
+
+  useEffect(() => {
+    filterVansByType(queryParam, vans);
+  }, [queryParam, vans]);
+
+  const fetchVansData = async () => {
     try {
       const storedVans = localStorage.getItem("vans");
       if (storedVans) {
-        let filteredVans = JSON.parse(storedVans);
-        if (type) {
-          filteredVans = filteredVans.filter((van) => van.type === type);
-        }
-        setVans(filteredVans);
+        setVans(JSON.parse(storedVans));
       } else {
         const response = await fetch("/api/vans");
         const data = await response.json();
-        let fetchedVans = data.vans;
-        if (type) {
-          fetchedVans = fetchedVans.filter((van) => van.type === type);
-        }
-        setVans(fetchedVans);
+        setVans(data.vans);
         localStorage.setItem("vans", JSON.stringify(data.vans));
       }
     } catch (error) {
@@ -32,29 +33,26 @@ function Vans() {
     }
   };
 
-  useEffect(() => {
-    fetchVansData(queryParam);
-  }, [queryParam]);
-
-  useEffect(() => {
-    fetchVansData();
-  }, []);
-
-  const handleFilter = (type) => {
-    setSearchParams({ type });
+  const filterVansByType = (type, vansToFilter) => {
+    if (type) {
+      const filteredVans = vansToFilter.filter((van) => van.type === type);
+      setFilteredVans(filteredVans);
+    } else {
+      setFilteredVans(vansToFilter);
+    }
   };
 
   return (
     <div className="container">
-      <h1 className="vans-avail">Vans Available for Rent</h1>
+      <h1 className="vansAvail">Vans Available for Rent</h1>
       <div className="filter-buttons">
-        <button onClick={() => handleFilter("")}>All</button>
-        <button onClick={() => handleFilter("type1")}>Type 1</button>
-        <button onClick={() => handleFilter("type2")}>Type 2</button>
-        <button onClick={() => handleFilter("type3")}>Type 3</button>
+        <button onClick={() => filterVansByType(null, vans)}>All</button>
+        <button onClick={() => filterVansByType("simple", vans)}>Simple</button>
+        <button onClick={() => filterVansByType("rugged", vans)}>Rugged</button>
+        <button onClick={() => filterVansByType("luxury", vans)}>Luxury</button>
       </div>
       <div className="vans-container">
-        {vans.map((van) => (
+        {filteredVans.map((van) => (
           <Van key={van.id} van={van} />
         ))}
       </div>

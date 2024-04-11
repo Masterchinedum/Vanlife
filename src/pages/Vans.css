@@ -13,6 +13,32 @@
   text-align: center;
 }
 
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #06038D;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background-color: #04025C;
+}
+
+.filter-buttons button.active {
+  background-color: #06038D;
+  font-weight: bold;
+}
+
 .vans-container {
   display: flex;
   flex-wrap: wrap;
