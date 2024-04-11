@@ -46,10 +46,10 @@ function Vans() {
     <div className="container">
       <h1 className="vansAvail">Vans Available for Rent</h1>
       <div className="filter-buttons">
-        <button onClick={() => filterVansByType(null, vans)}>All</button>
-        <button onClick={() => filterVansByType("simple", vans)}>Simple</button>
-        <button onClick={() => filterVansByType("rugged", vans)}>Rugged</button>
-        <button onClick={() => filterVansByType("luxury", vans)}>Luxury</button>
+        <button className= "All" onClick={() => filterVansByType(null, vans)}>All</button>
+        <button className = "simple" onClick={() => filterVansByType("simple", vans)}>Simple</button>
+        <button className="rugged" onClick={() => filterVansByType("rugged", vans)}>Rugged</button>
+        <button className="luxury" onClick={() => filterVansByType("luxury", vans)}>Luxury</button>
       </div>
       <div className="vans-container">
         {filteredVans.map((van) => (
