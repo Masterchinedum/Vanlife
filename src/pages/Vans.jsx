@@ -73,9 +73,9 @@ function Vans() {
   // JSX to render the component UI
   return (
     <div className="container">
-      <h1 className="vansAvail">Vans Available for Rent</h1> // Title for the vans listing
+      <h1 className="vansAvail">Vans Available for Rent</h1> {/*Title for the vans listing */} 
       <div className="filter-buttons">
-        // Buttons for filtering vans by type
+        {/*Buttons for filtering vans by type */}
         <button className="All" onClick={() => filterVansByType(null, vans)}>
           All
         </button>
@@ -99,7 +99,7 @@ function Vans() {
         </button>
       </div>
       <div className="pagination-controls">
-        // Dropdown for selecting the number of items per page
+        {/* Dropdown for selecting the number of items per page */}
         <label>
           Items per page:
           <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
@@ -110,13 +110,13 @@ function Vans() {
         </label>
       </div>
       <div className="vans-container">
-        // Mapping through the current vans to display them using the Van component
+        {/* Mapping through the current vans to display them using the Van component */}
         {currentVans.map((van) => (
           <Van key={van.id} van={van} />
         ))}
       </div>
       <div className="pagination">
-        // Pagination buttons to navigate through the pages
+        {/* Pagination buttons to navigate through the pages */}
         {Array.from(Array(totalPages).keys()).map((pageNumber) => (
           <button
             key={pageNumber}
