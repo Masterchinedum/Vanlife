@@ -7,7 +7,7 @@
   padding: 2rem;
 }
 
-.vans-avail {
+.vansAvail {
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -16,27 +16,21 @@
 .filter-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
   margin-bottom: 1rem;
 }
 
 .filter-buttons button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #06038D;
-  color: white;
+  background-color: #333;
+  color: #fff;
   border: none;
-  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .filter-buttons button:hover {
-  background-color: #04025C;
-}
-
-.filter-buttons button.active {
-  background-color: #06038D;
-  font-weight: bold;
+  background-color: #555;
 }
 
 .vans-container {
