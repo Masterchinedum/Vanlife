@@ -1,4 +1,3 @@
-// VanDetail.jsx
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -9,30 +8,40 @@ function VanDetail() {
     const [van, setVan] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        setLoading(true);
-        fetch(`/api/vans/${params.vanId}`)
-            .then(res => res.json())
-            .then(data => {
+    const fetchVanData = async () => {
+        try {
+            const storedVan = localStorage.getItem(`van-${params.vanId}`);
+
+            if (storedVan) {
+                setVan(JSON.parse(storedVan));
+            } else {
+                const response = await fetch(`/api/vans/${params.vanId}`);
+                const data = await response.json();
+
                 if (data && data.vans) {
                     setVan(data.vans);
+                    localStorage.setItem(`van-${params.vanId}`, JSON.stringify(data.vans));
                 } else {
                     console.error("Van details not found");
                 }
                 setLoading(false);
-            })
-            .catch(error => {
-                console.error("Error fetching van details:", error);
-                setLoading(false);
-            });
-    }, [params.vanId]);
+            }
+        } catch (error) {
+            console.error("Error fetching van details:", error);
+            setLoading(false);
+        }
+    };
 
-    if (loading) {
-        return <h2>Loading...</h2>;
-    }
+    useEffect(() => { 
+        fetchVanData();
+    }, [params.vanId]);
 
     if (!van) {
         return <h2>Van not found</h2>;
+    }
+
+    if (loading) {
+        return <h2>Loading...</h2>;
     }
 
     const { imageUrl, type, price, description } = van;
