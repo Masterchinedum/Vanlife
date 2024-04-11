@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Van from "../components/Van";
 import "./Vans.css";
 
 function Vans() {
+  const [searchParams] = useSearchParams();
+  const queryParam = searchParams.get("type")
   const [vans, setVans] = useState([]);
 
   const fetchVansData = async () => {
