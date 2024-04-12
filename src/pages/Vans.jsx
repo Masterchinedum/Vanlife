@@ -7,15 +7,11 @@ function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get("type");
   const [vans, setVans] = useState([]);
-  const [filteredVans, setFilteredVans] = useState([]);
 
   useEffect(() => {
     fetchVansData();
   }, []);
 
-  useEffect(() => {
-    filterVansByType(queryParam, vans);
-  }, [queryParam, vans]);
 
   const fetchVansData = async () => {
     try {
@@ -33,34 +29,29 @@ function Vans() {
     }
   };
 
-  const filterVansByType = (type, vansToFilter) => {
-    if (type) {
-      const filteredVans = vansToFilter.filter((van) => van.type === type);
-      setFilteredVans(filteredVans);
-    } else {
-      setFilteredVans(vansToFilter);
-    }
-  };
+  const displayedVans = queryParam ? vans.filter((van) => van.type === queryParam) : vans;
+
+  const viviVan = displayedVans.map((van) => (
+    <Van key={van.id} van={van} />
+  ));
 
   return (
     <div className="container">
       <h1 className="vansAvail">Vans Available for Rent</h1>
-      {/* <div className="filter-buttons">
-        <button className= "All" onClick={() => filterVansByType(null, vans)}>All</button>
-        <button className = "simple" onClick={() => filterVansByType("simple", vans)}>Simple</button>
-        <button className="rugged" onClick={() => filterVansByType("rugged", vans)}>Rugged</button>
-        <button className="luxury" onClick={() => filterVansByType("luxury", vans)}>Luxury</button>
-      </div> */}
       <div className="filter-buttons">
+        <button className= "filtrin All" onClick={() => setSearchParams("")}>All</button>
+        <button className = "filtrin simple" onClick={() => setSearchParams( {type: "simple"})}>Simple</button>
+        <button className="filtrin rugged" onClick={() => setSearchParams( {type: "rugged"})}>Rugged</button>
+        <button className="filtrin luxury" onClick={() => setSearchParams( {type: "luxury"})}>Luxury</button>
+      </div>
+      {/* <div className="filter-buttons">
         <Link className = "filtrin All" to=".">All</Link>
         <Link className = "filtrin simple" to="?type=simple">Simple</Link>
         <Link className = "filtrin rugged" to="?type=rugged">Rugged</Link>
         <Link className = "filtrin luxury" to="?type=luxury">Luxury</Link>
-      </div>
+      </div> */}
       <div className="vans-container">
-        {filteredVans.map((van) => (
-          <Van key={van.id} van={van} />
-        ))}
+        {viviVan}
       </div>
     </div>
   );
