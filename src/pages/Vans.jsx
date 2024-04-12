@@ -7,17 +7,17 @@ import "./Vans.css"; // Stylesheet for the Vans component
 // The Vans functional component
 function Vans() {
   // State hooks for managing component state
-  const [searchParams, setSearchParams] = useSearchParams(); // Hook to read and modify search parameters in the URL
-  const queryParam = searchParams.get("type"); // Retrieve 'type' parameter from the URL
-  const [vans, setVans] = useState([]); // State for storing the list of all vans
-  const [filteredVans, setFilteredVans] = useState([]); // State for storing the list of vans filtered by type
-  const [currentPage, setCurrentPage] = useState(1); // State for tracking the current page number
-  const [itemsPerPage, setItemsPerPage] = useState(6); // State for setting the number of items to display per page
+  const [searchParams, setSearchParams] = useSearchParams(); {/* Hook to read and modify search parameters in the URL */}
+  const queryParam = searchParams.get("type"); {/*Retrieve 'type' parameter from the URL */}
+  const [vans, setVans] = useState([]); {/*State for storing the list of all vans*/}
+  const [filteredVans, setFilteredVans] = useState([]); {/*State for storing the list of vans filtered by type */}
+  const [currentPage, setCurrentPage] = useState(1); {/*State for tracking the current page number */}
+  const [itemsPerPage, setItemsPerPage] = useState(6); {/*State for setting the number of items to display per page */}
 
   // Effect hook for fetching van data on component mount
   useEffect(() => {
-    fetchVansData(); // Call the function to fetch van data
-  }, []); // Empty dependency array means this effect runs once on mount
+    fetchVansData(); {/* Call the function to fetch van data */}
+  }, []); {/* Empty dependency array means this effect runs once on mount */}
 
   // Effect hook for filtering vans whenever the queryParam or vans state changes
   useEffect(() => {
