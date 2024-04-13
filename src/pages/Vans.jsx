@@ -39,7 +39,7 @@ function Vans() {
     <div className="container">
       <h1 className="vansAvail">Vans Available for Rent</h1>
       <div className="filter-buttons">
-        <button className= "filtrin All" onClick={() => setSearchParams("")}>All</button>
+        { queryParam ? ( <button className= "filtrin All" onClick={() => setSearchParams("")}>All</button> ) : null}
         <button className = "filtrin simple" onClick={() => setSearchParams( {type: "simple"})}>Simple</button>
         <button className="filtrin rugged" onClick={() => setSearchParams( {type: "rugged"})}>Rugged</button>
         <button className="filtrin luxury" onClick={() => setSearchParams( {type: "luxury"})}>Luxury</button>
