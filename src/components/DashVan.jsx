@@ -5,7 +5,7 @@ import './DashVan.css';
 function DashVan({ van }) {
   return (
     <div className="dash-van" key={van.id}>
-      <Link to = {`/host/vans/${van.id}`}
+      <Link to = {`${van.id}`}
         aria-label={`View details for ${van.name}, 
         priced at $${van.price} per day`}
         >
