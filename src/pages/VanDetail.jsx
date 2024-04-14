@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import './VanDetail.css'
 
 function VanDetail() {
@@ -47,6 +47,14 @@ function VanDetail() {
 
   return (
     <div className="van-detail-main-container ">
+      <div className="returner">
+        <Link
+          to=".."
+          relative = "path"
+          className="return-button"
+          >&larr; <span>Back to all vans</span>
+        </Link>
+      </div>
       <div className="van-detail-card">
         <img src={imageUrl} alt={van.name} className="van-detail-img" />
         <i className={`van-type ${type} selected`}>{type}</i>

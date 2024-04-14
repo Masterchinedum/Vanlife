@@ -2,10 +2,30 @@
 
 .van-detail-main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 100px 0px;
+  }
+  .return-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    align-self: start;
+  }
+  
+  .returner {
+    align-self: flex-start;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
   }
   
   .van-detail-card {
@@ -14,7 +34,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
-    text-align: center;
+    /* text-align: center; */
   }
   
   .van-detail-img {
@@ -22,7 +42,7 @@
     max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 20px 0px;
   }
   
   .van-type {
